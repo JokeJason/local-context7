@@ -1,0 +1,9 @@
+{
+    "_source": {
+        "type": "github",
+        "repo": "langchain-ai/docs",
+        "branch": "main",
+        "path": "src/oss",
+        "extensions": [".md", ".mdx"]
+    }
+}
