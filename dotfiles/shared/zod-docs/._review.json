@@ -1,0 +1,106 @@
+[
+  {
+    "path": "metadata.mdx",
+    "filename": "metadata.mdx",
+    "size_bytes": 6881,
+    "line_count": 237,
+    "preview": "---\ntitle: \"Metadata and registries\"\ndescription: \"Attaching and manipulatinvg metadata on Zod schemas\"\n---\n\nimport { Tabs, Tab } from 'fumadocs-ui/components/tabs';\nimport { Callout } from \"fumadocs-ui/components/callout\"\n\n{/* > Zod 4+ provides native `.toJSONSChema()` functionality that leverages registries to generate idiomatic JSON Schema from Zod. Refer to the [JSON SChema docs](/json-schema) page for more information. */}\n\n"
+  }
+,
+  {
+    "path": "library-authors.mdx",
+    "filename": "library-authors.mdx",
+    "size_bytes": 9810,
+    "line_count": 265,
+    "preview": "---\ntitle: For library authors\ndescription: \"Guidelines and best practices for library authors integrating with Zod\"\n---\n\nimport { Callout } from \"fumadocs-ui/components/callout\"\n\n<Callout title=\"Update — July 10th, 2025\">\nZod `4.0.0` has been released on `npm`. This completes the incremental rollout process described below. To add support, bump your peer dependency to include `zod@^4.0.0`:\n\n"
+  }
+,
+  {
+    "path": "codecs.mdx",
+    "filename": "codecs.mdx",
+    "size_bytes": 17236,
+    "line_count": 569,
+    "preview": "---\ntitle: Codecs\ndescription: \"Bidirectional transformations with encode and decode\"\n---\n\nimport { Tabs, Tab } from 'fumadocs-ui/components/tabs';\nimport { ThemedImage } from \"@/components/themed-image\";\n\n> ✨ **New** — Introduced in `zod@4.1`\n\n"
+  }
+,
+  {
+    "path": "error-customization.mdx",
+    "filename": "error-customization.mdx",
+    "size_bytes": 10806,
+    "line_count": 431,
+    "preview": "---\ntitle: Customizing errors\ndescription: \"Guide to customizing validation error messages and error handling patterns\"\n---\n\nimport { Tabs, Tab } from 'fumadocs-ui/components/tabs';\n\n{/* ## `$ZodError` */}\n\nIn Zod, validation errors are surfaced as instances of the `z.core.$ZodError` class.\n"
+  }
+,
+  {
+    "path": "index.mdx",
+    "filename": "index.mdx",
+    "size_bytes": 6282,
+    "line_count": 193,
+    "preview": "---\ntitle: \"Intro\"\nmode: \"center\"\ndescription: \"Introduction to Zod - TypeScript-first schema validation library with static type inference\"\n---\n\nimport { Accordion, Accordions } from 'fumadocs-ui/components/accordion';\nimport { Tabs } from 'fumadocs-ui/components/tabs';\n\nimport { Featured } from '../components/featured';\n"
+  }
+,
+  {
+    "path": "json-schema.mdx",
+    "filename": "json-schema.mdx",
+    "size_bytes": 15553,
+    "line_count": 592,
+    "preview": "---\ntitle: \"JSON Schema\"\ndescription: \"How to convert Zod schemas to JSON Schema\"\n---\n\nimport { Tabs, Tab } from 'fumadocs-ui/components/tabs';\nimport { Callout } from \"fumadocs-ui/components/callout\"\nimport { Accordion, Accordions } from 'fumadocs-ui/components/accordion';\n\n<Callout icon={'💎'}>\n"
+  }
+,
+  {
+    "path": "error-formatting.mdx",
+    "filename": "error-formatting.mdx",
+    "size_bytes": 4785,
+    "line_count": 174,
+    "preview": "---\ntitle: Formatting errors\ndescription: \"Utilities for formatting and displaying Zod errors\"\n---\n\nimport { Callout } from \"fumadocs-ui/components/callout\";\nimport { Accordion, Accordions } from 'fumadocs-ui/components/accordion';\n\nZod emphasizes _completeness_ and _correctness_ in its error reporting. In many cases, it's helpful to convert the `$ZodError` to a more useful format. Zod provides some utilities for this.\n\n"
+  }
+,
+  {
+    "path": "basics.mdx",
+    "filename": "basics.mdx",
+    "size_bytes": 4379,
+    "line_count": 162,
+    "preview": "---\ntitle: Basic usage\ndescription: \"Basic usage guide covering schema definition, parsing data, error handling, and type inference\"\n---\n\nimport { Tabs, Tab } from 'fumadocs-ui/components/tabs';\nimport { Callout } from \"fumadocs-ui/components/callout\";\n\nThis page will walk you through the basics of creating schemas, parsing data, and using inferred types. For complete documentation on Zod's schema API, refer to [Defining schemas](/api).\n\n"
+  }
+,
+  {
+    "path": "packages/zod.mdx",
+    "filename": "zod.mdx",
+    "size_bytes": 1854,
+    "line_count": 74,
+    "preview": "---\ntitle: Zod\ndescription: \"Internals and structure of the Zod library\"\n---\n\nThe `zod/v4` package is the \"flagship\" library of the Zod ecosystem. It strikes a balance between developer experience and bundle size that's ideal for the vast majority of applications. \n\n> If you have uncommonly strict constraints around bundle size, consider [Zod Mini](/packages/mini).\n\nZod aims to provide a schema API that maps one-to-one to TypeScript's type system.\n"
+  }
+,
+  {
+    "path": "packages/core.mdx",
+    "filename": "core.mdx",
+    "size_bytes": 12383,
+    "line_count": 459,
+    "preview": "---\ntitle: Zod Core\ndescription: \"Zod Core package - minimal core functionality for custom implementations\"\n---\n\nimport { Callout } from \"fumadocs-ui/components/callout\"\nimport { Accordion, Accordions } from 'fumadocs-ui/components/accordion';\n\nThis sub-package exports the core classes and utilities that are consumed by Zod and Zod Mini. It is not intended to be used directly; instead it's designed to be extended by other packages. It implements:\n\n"
+  }
+,
+  {
+    "path": "packages/mini.mdx",
+    "filename": "mini.mdx",
+    "size_bytes": 7845,
+    "line_count": 243,
+    "preview": "---\ntitle: Zod Mini\ndescription: \"Zod Mini - a tree-shakable Zod\"\n---\n\nimport { Tabs, Tab } from 'fumadocs-ui/components/tabs';\nimport { Callout } from 'fumadocs-ui/components/callout';\n\n<Callout type=\"info\">\n  **Note** — The docs for Zod Mini are interleaved with the regular Zod docs via tabbed code blocks. This page is designed to explain why Zod Mini exists, when to use it, and some key differences from regular Zod.\n"
+  }
+,
+  {
+    "path": "api.mdx",
+    "filename": "api.mdx",
+    "size_bytes": 83601,
+    "line_count": 3147,
+    "preview": "---\ntitle: Defining schemas\ndescription: \"Complete API reference for all Zod schema types, methods, and validation features\"\n---\n\nimport { Tabs, Tab } from 'fumadocs-ui/components/tabs';\nimport { Callout } from \"fumadocs-ui/components/callout\"\nimport { Accordion, Accordions } from 'fumadocs-ui/components/accordion';\n\nTo validate data, you must first define a *schema*. Schemas represent *types*, from simple primitive values to complex nested objects and arrays. \n"
+  }
+,
+  {
+    "path": "ecosystem.mdx",
+    "filename": "ecosystem.mdx",
+    "size_bytes": 1550,
+    "line_count": 59,
+    "preview": "---\ntitle: Ecosystem\ndescription: \"Overview of the Zod ecosystem including integrations, tools, and community resources\"\n---\n\nimport {\n  ApiLibraries,\n  FormIntegrations,\n  ZodToX,\n  XToZod,\n"
+  }
+
+]

@@ -16,6 +16,14 @@
   }
 ,
   {
+    "path": "03-architecture/index.mdx",
+    "filename": "index.mdx",
+    "size_bytes": 130,
+    "line_count": 6,
+    "preview": "---\ntitle: Architecture\ndescription: How Next.js Works\n---\n\nLearn about the Next.js architecture and how it works under the hood.\n"
+  }
+,
+  {
     "path": "03-architecture/nextjs-compiler.mdx",
     "filename": "nextjs-compiler.mdx",
     "size_bytes": 14563,
@@ -45,6 +53,14 @@
     "size_bytes": 657,
     "line_count": 12,
     "preview": "---\ntitle: Rspack Integration\nnav_title: Rspack\ndescription: Use the `next-rspack` plugin to bundle your Next.js with Rspack.\nversion: experimental\n---\n\nThe Rspack team has created a community plugin for Next.js, which is part of a [partnering effort](https://rspack.rs/blog/rspack-next-partner) with the Rspack team.\n\nThis plugin is currently experimental. Please use this [discussion thread](https://github.com/vercel/next.js/discussions/77800) to give feedback on any issues you encounter.\n"
+  }
+,
+  {
+    "path": "04-community/index.mdx",
+    "filename": "index.mdx",
+    "size_bytes": 1732,
+    "line_count": 31,
+    "preview": "---\ntitle: Next.js Community\nnav_title: Community\ndescription: Get involved in the Next.js community.\n---\n\nWith over 5 million weekly downloads, Next.js has a large and active community of developers across the world. Here's how you can get involved in our community:\n\n## Contributing\n\n"
   }
 ,
   {

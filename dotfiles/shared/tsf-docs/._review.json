@@ -128,14 +128,6 @@
   }
 ,
   {
-    "path": "framework/lit/reference/index.md",
-    "filename": "index.md",
-    "size_bytes": 158,
-    "line_count": 10,
-    "preview": "---\nid: \"@tanstack/lit-form\"\ntitle: \"@tanstack/lit-form\"\n---\n\n# @tanstack/lit-form\n\n## Classes\n\n- [TanStackFormController](classes/TanStackFormController.md)\n"
-  }
-,
-  {
     "path": "framework/vue/quick-start.md",
     "filename": "quick-start.md",
     "size_bytes": 1099,
@@ -920,6 +912,14 @@
   }
 ,
   {
+    "path": "community-resources.md",
+    "filename": "community-resources.md",
+    "size_bytes": 724,
+    "line_count": 16,
+    "preview": "---\ntitle: Community Resources\nmedia:\n  [\n    {\n      title: \"Balastrong's TanStack Form Video Series\",\n      url: 'https://www.youtube.com/playlist?list=PLOQjd5dsGSxInTKUWTxyqSKwZCjDIUs0Y',\n      description: 'Series by Balastrong, a maintainer of TanStack Form, covering setup, validation, array fields, reactivity, schema libraries, side effects, and composable fields.',\n    },\n    {\n"
+  }
+,
+  {
     "path": "philosophy.md",
     "filename": "philosophy.md",
     "size_bytes": 3560,
@@ -976,14 +976,6 @@
   }
 ,
   {
-    "path": "reference/type-aliases/EventClientEventNames.md",
-    "filename": "EventClientEventNames.md",
-    "size_bytes": 322,
-    "line_count": 12,
-    "preview": "---\nid: EventClientEventNames\ntitle: EventClientEventNames\n---\n\n# Type Alias: EventClientEventNames\n\n```ts\ntype EventClientEventNames = ExtractEventNames<EventClientEventMap>;\n```\n"
-  }
-,
-  {
     "path": "reference/type-aliases/DeepKeyAndValueObject.md",
     "filename": "DeepKeyAndValueObject.md",
     "size_bytes": 792,
@@ -1005,14 +997,6 @@
     "size_bytes": 519,
     "line_count": 22,
     "preview": "---\nid: ObjectAccessor\ntitle: ObjectAccessor\n---\n\n# Type Alias: ObjectAccessor\\<TParent, TKey\\>\n\n```ts\ntype ObjectAccessor<TParent, TKey> = TParent[\"key\"] extends never ? `${TKey}` : `${TParent[\"key\"]}.${TKey}`;\n```\n"
-  }
-,
-  {
-    "path": "reference/type-aliases/EventClientEventMap.md",
-    "filename": "EventClientEventMap.md",
-    "size_bytes": 290,
-    "line_count": 12,
-    "preview": "---\nid: EventClientEventMap\ntitle: EventClientEventMap\n---\n\n# Type Alias: EventClientEventMap\n\n```ts\ntype EventClientEventMap = keyof EventMap;\n```\n"
   }
 ,
   {
@@ -1048,14 +1032,6 @@
   }
 ,
   {
-    "path": "reference/type-aliases/AnyFormState.md",
-    "filename": "AnyFormState.md",
-    "size_bytes": 306,
-    "line_count": 12,
-    "preview": "---\nid: AnyFormState\ntitle: AnyFormState\n---\n\n# Type Alias: AnyFormState\n\n```ts\ntype AnyFormState = FormState<any, any, any, any, any, any, any, any, any, any, any>;\n```\n"
-  }
-,
-  {
     "path": "reference/type-aliases/DeepValue.md",
     "filename": "DeepValue.md",
     "size_bytes": 528,
@@ -1080,14 +1056,6 @@
   }
 ,
   {
-    "path": "reference/type-aliases/AnyFieldMetaBase.md",
-    "filename": "AnyFieldMetaBase.md",
-    "size_bytes": 378,
-    "line_count": 12,
-    "preview": "---\nid: AnyFieldMetaBase\ntitle: AnyFieldMetaBase\n---\n\n# Type Alias: AnyFieldMetaBase\n\n```ts\ntype AnyFieldMetaBase = FieldMetaBase<any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any>;\n```\n"
-  }
-,
-  {
     "path": "reference/type-aliases/UnwrapFormAsyncValidateOrFn.md",
     "filename": "UnwrapFormAsyncValidateOrFn.md",
     "size_bytes": 668,
@@ -1101,14 +1069,6 @@
     "size_bytes": 404,
     "line_count": 22,
     "preview": "---\nid: ValidationLogicFn\ntitle: ValidationLogicFn\n---\n\n# Type Alias: ValidationLogicFn()\n\n```ts\ntype ValidationLogicFn = (props) => void;\n```\n"
-  }
-,
-  {
-    "path": "reference/type-aliases/FieldInfo.md",
-    "filename": "FieldInfo.md",
-    "size_bytes": 1056,
-    "line_count": 46,
-    "preview": "---\nid: FieldInfo\ntitle: FieldInfo\n---\n\n# Type Alias: FieldInfo\\<TFormData\\>\n\n```ts\ntype FieldInfo<TFormData> = object;\n```\n"
   }
 ,
   {
@@ -1128,27 +1088,11 @@
   }
 ,
   {
-    "path": "reference/type-aliases/ValidationSource.md",
-    "filename": "ValidationSource.md",
-    "size_bytes": 266,
-    "line_count": 12,
-    "preview": "---\nid: ValidationSource\ntitle: ValidationSource\n---\n\n# Type Alias: ValidationSource\n\n```ts\ntype ValidationSource = \"form\" | \"field\";\n```\n"
-  }
-,
-  {
     "path": "reference/type-aliases/FieldsMap.md",
     "filename": "FieldsMap.md",
     "size_bytes": 707,
     "line_count": 25,
     "preview": "---\nid: FieldsMap\ntitle: FieldsMap\n---\n\n# Type Alias: FieldsMap\\<TFormData, TFieldGroupData\\>\n\n```ts\ntype FieldsMap<TFormData, TFieldGroupData> = TFieldGroupData extends any[] ? never : string extends keyof TFieldGroupData ? never : { [K in keyof TFieldGroupData]: DeepKeysOfType<TFormData, TFieldGroupData[K]> };\n```\n"
-  }
-,
-  {
-    "path": "reference/type-aliases/AnyFieldGroupApi.md",
-    "filename": "AnyFieldGroupApi.md",
-    "size_bytes": 351,
-    "line_count": 12,
-    "preview": "---\nid: AnyFieldGroupApi\ntitle: AnyFieldGroupApi\n---\n\n# Type Alias: AnyFieldGroupApi\n\n```ts\ntype AnyFieldGroupApi = FieldGroupApi<any, any, any, any, any, any, any, any, any, any, any, any, any, any>;\n```\n"
   }
 ,
   {
@@ -1192,27 +1136,11 @@
   }
 ,
   {
-    "path": "reference/type-aliases/AnyFormOptions.md",
-    "filename": "AnyFormOptions.md",
-    "size_bytes": 321,
-    "line_count": 12,
-    "preview": "---\nid: AnyFormOptions\ntitle: AnyFormOptions\n---\n\n# Type Alias: AnyFormOptions\n\n```ts\ntype AnyFormOptions = FormOptions<any, any, any, any, any, any, any, any, any, any, any, any>;\n```\n"
-  }
-,
-  {
     "path": "reference/type-aliases/AllObjectKeys.md",
     "filename": "AllObjectKeys.md",
     "size_bytes": 339,
     "line_count": 18,
     "preview": "---\nid: AllObjectKeys\ntitle: AllObjectKeys\n---\n\n# Type Alias: AllObjectKeys\\<T\\>\n\n```ts\ntype AllObjectKeys<T> = T extends any ? keyof T & string | number : never;\n```\n"
-  }
-,
-  {
-    "path": "reference/type-aliases/AnyFieldApi.md",
-    "filename": "AnyFieldApi.md",
-    "size_bytes": 446,
-    "line_count": 14,
-    "preview": "---\nid: AnyFieldApi\ntitle: AnyFieldApi\n---\n\n# Type Alias: AnyFieldApi\n\n```ts\ntype AnyFieldApi = FieldApi<any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any>;\n```\n"
   }
 ,
   {
@@ -1229,14 +1157,6 @@
     "size_bytes": 918,
     "line_count": 30,
     "preview": "---\nid: DeepKeysAndValuesImpl\ntitle: DeepKeysAndValuesImpl\n---\n\n# Type Alias: DeepKeysAndValuesImpl\\<T, TParent, TAcc\\>\n\n```ts\ntype DeepKeysAndValuesImpl<T, TParent, TAcc> = unknown extends T ? \n  | TAcc\n"
-  }
-,
-  {
-    "path": "reference/type-aliases/AnyFormApi.md",
-    "filename": "AnyFormApi.md",
-    "size_bytes": 383,
-    "line_count": 14,
-    "preview": "---\nid: AnyFormApi\ntitle: AnyFormApi\n---\n\n# Type Alias: AnyFormApi\n\n```ts\ntype AnyFormApi = FormApi<any, any, any, any, any, any, any, any, any, any, any, any>;\n```\n"
   }
 ,
   {
@@ -1280,14 +1200,6 @@
   }
 ,
   {
-    "path": "reference/type-aliases/Nullable.md",
-    "filename": "Nullable.md",
-    "size_bytes": 290,
-    "line_count": 18,
-    "preview": "---\nid: Nullable\ntitle: Nullable\n---\n\n# Type Alias: Nullable\\<T\\>\n\n```ts\ntype Nullable<T> = T & undefined | null;\n```\n"
-  }
-,
-  {
     "path": "reference/type-aliases/ExtractGlobalFormError.md",
     "filename": "ExtractGlobalFormError.md",
     "size_bytes": 437,
@@ -1296,27 +1208,11 @@
   }
 ,
   {
-    "path": "reference/type-aliases/AnyFieldMetaDerived.md",
-    "filename": "AnyFieldMetaDerived.md",
-    "size_bytes": 393,
-    "line_count": 12,
-    "preview": "---\nid: AnyFieldMetaDerived\ntitle: AnyFieldMetaDerived\n---\n\n# Type Alias: AnyFieldMetaDerived\n\n```ts\ntype AnyFieldMetaDerived = FieldMetaDerived<any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any>;\n```\n"
-  }
-,
-  {
     "path": "reference/type-aliases/UnwrapFieldValidateOrFn.md",
     "filename": "UnwrapFieldValidateOrFn.md",
     "size_bytes": 1338,
     "line_count": 29,
     "preview": "---\nid: UnwrapFieldValidateOrFn\ntitle: UnwrapFieldValidateOrFn\n---\n\n# Type Alias: UnwrapFieldValidateOrFn\\<TName, TValidateOrFn, TFormValidateOrFn\\>\n\n```ts\ntype UnwrapFieldValidateOrFn<TName, TValidateOrFn, TFormValidateOrFn> = \n  | [TFormValidateOrFn] extends [StandardSchemaV1<any, infer TStandardOut>] ? TName extends keyof TStandardOut ? StandardSchemaV1Issue[] : undefined : undefined\n"
-  }
-,
-  {
-    "path": "reference/type-aliases/AnyFieldMeta.md",
-    "filename": "AnyFieldMeta.md",
-    "size_bytes": 358,
-    "line_count": 12,
-    "preview": "---\nid: AnyFieldMeta\ntitle: AnyFieldMeta\n---\n\n# Type Alias: AnyFieldMeta\n\n```ts\ntype AnyFieldMeta = FieldMeta<any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any>;\n```\n"
   }
 ,
   {
@@ -1384,14 +1280,6 @@
   }
 ,
   {
-    "path": "reference/type-aliases/ValidationError.md",
-    "filename": "ValidationError.md",
-    "size_bytes": 253,
-    "line_count": 12,
-    "preview": "---\nid: ValidationError\ntitle: ValidationError\n---\n\n# Type Alias: ValidationError\n\n```ts\ntype ValidationError = unknown;\n```\n"
-  }
-,
-  {
     "path": "reference/type-aliases/TupleAccessor.md",
     "filename": "TupleAccessor.md",
     "size_bytes": 497,
@@ -1421,22 +1309,6 @@
     "size_bytes": 4907,
     "line_count": 110,
     "preview": "---\nid: \"@tanstack/form-core\"\ntitle: \"@tanstack/form-core\"\n---\n\n# @tanstack/form-core\n\n## Classes\n\n- [FieldApi](classes/FieldApi.md)\n"
-  }
-,
-  {
-    "path": "reference/variables/defaultValidationLogic.md",
-    "filename": "defaultValidationLogic.md",
-    "size_bytes": 313,
-    "line_count": 12,
-    "preview": "---\nid: defaultValidationLogic\ntitle: defaultValidationLogic\n---\n\n# Variable: defaultValidationLogic\n\n```ts\nconst defaultValidationLogic: ValidationLogicFn;\n```\n"
-  }
-,
-  {
-    "path": "reference/variables/formEventClient.md",
-    "filename": "formEventClient.md",
-    "size_bytes": 273,
-    "line_count": 12,
-    "preview": "---\nid: formEventClient\ntitle: formEventClient\n---\n\n# Variable: formEventClient\n\n```ts\nconst formEventClient: FormEventClient;\n```\n"
   }
 ,
   {

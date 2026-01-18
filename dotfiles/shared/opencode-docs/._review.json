@@ -16,6 +16,14 @@
   }
 ,
   {
+    "path": "README.zh-TW.md",
+    "filename": "README.zh-TW.md",
+    "size_bytes": 5568,
+    "line_count": 116,
+    "preview": "<p align=\"center\">\n  <a href=\"https://opencode.ai\">\n    <picture>\n      <source srcset=\"packages/console/app/src/asset/logo-ornate-dark.svg\" media=\"(prefers-color-scheme: dark)\">\n      <source srcset=\"packages/console/app/src/asset/logo-ornate-light.svg\" media=\"(prefers-color-scheme: light)\">\n      <img src=\"packages/console/app/src/asset/logo-ornate-light.svg\" alt=\"OpenCode logo\">\n    </picture>\n  </a>\n</p>\n<p align=\"center\">開源的 AI Coding Agent。</p>\n"
+  }
+,
+  {
     "path": "github/README.md",
     "filename": "README.md",
     "size_bytes": 6017,
@@ -304,43 +312,11 @@
   }
 ,
   {
-    "path": "packages/desktop/README.md",
-    "filename": "README.md",
-    "size_bytes": 721,
-    "line_count": 32,
-    "preview": "# OpenCode Desktop\n\nNative OpenCode desktop app, built with Tauri v2.\n\n## Development\n\nFrom the repo root:\n\n```bash\nbun install\n"
-  }
-,
-  {
-    "path": "packages/slack/README.md",
-    "filename": "README.md",
-    "size_bytes": 750,
-    "line_count": 27,
-    "preview": "# @opencode-ai/slack\n\nSlack bot integration for opencode that creates threaded conversations.\n\n## Setup\n\n1. Create a Slack app at https://api.slack.com/apps\n2. Enable Socket Mode\n3. Add the following OAuth scopes:\n   - `chat:write`\n"
-  }
-,
-  {
-    "path": "packages/opencode/AGENTS.md",
-    "filename": "AGENTS.md",
-    "size_bytes": 1404,
-    "line_count": 27,
-    "preview": "# opencode agent guidelines\n\n## Build/Test Commands\n\n- **Install**: `bun install`\n- **Run**: `bun run --conditions=browser ./src/index.ts`\n- **Typecheck**: `bun run typecheck` (npm run typecheck)\n- **Test**: `bun test` (runs all tests)\n- **Single test**: `bun test test/tool/tool.test.ts` (specific test file)\n\n"
-  }
-,
-  {
-    "path": "packages/opencode/src/acp/README.md",
-    "filename": "README.md",
-    "size_bytes": 4717,
-    "line_count": 164,
-    "preview": "# ACP (Agent Client Protocol) Implementation\n\nThis directory contains a clean, protocol-compliant implementation of the [Agent Client Protocol](https://agentclientprotocol.com/) for opencode.\n\n## Architecture\n\nThe implementation follows a clean separation of concerns:\n\n### Core Components\n\n"
-  }
-,
-  {
-    "path": "AGENTS.md",
-    "filename": "AGENTS.md",
-    "size_bytes": 224,
-    "line_count": 4,
-    "preview": "- To test opencode in `packages/opencode`, run `bun dev`.\n- To regenerate the JavaScript SDK, run `./packages/sdk/js/script/build.ts`.\n- ALWAYS USE PARALLEL TOOLS WHEN APPLICABLE.\n- The default branch in this repo is `dev`.\n"
+    "path": "README.zh-CN.md",
+    "filename": "README.zh-CN.md",
+    "size_bytes": 4982,
+    "line_count": 116,
+    "preview": "<p align=\"center\">\n  <a href=\"https://opencode.ai\">\n    <picture>\n      <source srcset=\"packages/console/app/src/asset/logo-ornate-dark.svg\" media=\"(prefers-color-scheme: dark)\">\n      <source srcset=\"packages/console/app/src/asset/logo-ornate-light.svg\" media=\"(prefers-color-scheme: light)\">\n      <img src=\"packages/console/app/src/asset/logo-ornate-light.svg\" alt=\"OpenCode logo\">\n    </picture>\n  </a>\n</p>\n<p align=\"center\">开源的 AI Coding Agent。</p>\n"
   }
 
 ]
