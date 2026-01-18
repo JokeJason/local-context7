@@ -3,6 +3,6 @@
         "type": "github",
         "repo": "anomalyco/opencode",
         "branch": "dev",
-        "extensions": [".md", ".mdx"]
+        "path": "packages/web/src/content/docs"
     }
 }

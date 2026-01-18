@@ -1,5 +1,93 @@
 [
   {
+    "path": "lsp.mdx",
+    "filename": "lsp.mdx",
+    "size_bytes": 7902,
+    "line_count": 143,
+    "preview": "---\ntitle: LSP Servers\ndescription: OpenCode integrates with your LSP servers.\n---\n\nOpenCode integrates with your Language Server Protocol (LSP) to help the LLM interact with your codebase. It uses diagnostics to provide feedback to the LLM.\n\n---\n\n## Built-in\n"
+  }
+,
+  {
+    "path": "agents.mdx",
+    "filename": "agents.mdx",
+    "size_bytes": 16385,
+    "line_count": 680,
+    "preview": "---\ntitle: Agents\ndescription: Configure and use specialized agents.\n---\n\nAgents are specialized AI assistants that can be configured for specific tasks and workflows. They allow you to create focused tools with custom prompts, models, and tool access.\n\n:::tip\nUse the plan agent to analyze code and review suggestions without making any code changes.\n:::\n"
+  }
+,
+  {
+    "path": "acp.mdx",
+    "filename": "acp.mdx",
+    "size_bytes": 3584,
+    "line_count": 156,
+    "preview": "---\ntitle: ACP Support\ndescription: Use OpenCode in any ACP-compatible editor.\n---\n\nOpenCode supports the [Agent Client Protocol](https://agentclientprotocol.com) or (ACP), allowing you to use it directly in compatible editors and IDEs.\n\n:::tip\nFor a list of editors and tools that support ACP, check out the [ACP progress report](https://zed.dev/blog/acp-progress-report#available-now).\n:::\n"
+  }
+,
+  {
+    "path": "config.mdx",
+    "filename": "config.mdx",
+    "size_bytes": 18048,
+    "line_count": 683,
+    "preview": "---\ntitle: Config\ndescription: Using the OpenCode JSON config.\n---\n\nYou can configure OpenCode using a JSON config file.\n\n---\n\n## Format\n"
+  }
+,
+  {
+    "path": "sdk.mdx",
+    "filename": "sdk.mdx",
+    "size_bytes": 15731,
+    "line_count": 391,
+    "preview": "---\ntitle: SDK\ndescription: Type-safe JS client for opencode server.\n---\n\nimport config from \"../../../config.mjs\"\nexport const typesUrl = `${config.github}/blob/dev/packages/sdk/js/src/gen/types.gen.ts`\n\nThe opencode JS/TS SDK provides a type-safe client for interacting with the server.\nUse it to build integrations and control opencode programmatically.\n"
+  }
+,
+  {
+    "path": "tools.mdx",
+    "filename": "tools.mdx",
+    "size_bytes": 7776,
+    "line_count": 345,
+    "preview": "---\ntitle: Tools\ndescription: Manage the tools an LLM can use.\n---\n\nTools allow the LLM to perform actions in your codebase. OpenCode comes with a set of built-in tools, but you can extend it with [custom tools](/docs/custom-tools) or [MCP servers](/docs/mcp-servers).\n\nBy default, all tools are **enabled** and don't need permission to run. You can control tool behavior through [permissions](/docs/permissions).\n\n---\n"
+  }
+,
+  {
+    "path": "formatters.mdx",
+    "filename": "formatters.mdx",
+    "size_bytes": 8524,
+    "line_count": 128,
+    "preview": "---\ntitle: Formatters\ndescription: OpenCode uses language specific formatters.\n---\n\nOpenCode automatically formats files after they are written or edited using language-specific formatters. This ensures that the code that is generated follows the code styles of your project.\n\n---\n\n## Built-in\n"
+  }
+,
+  {
+    "path": "cli.mdx",
+    "filename": "cli.mdx",
+    "size_bytes": 16226,
+    "line_count": 593,
+    "preview": "---\ntitle: CLI\ndescription: OpenCode CLI options and commands.\n---\n\nimport { Tabs, TabItem } from \"@astrojs/starlight/components\"\n\nThe OpenCode CLI by default starts the [TUI](/docs/tui) when run without any arguments.\n\n```bash\n"
+  }
+,
+  {
+    "path": "plugins.mdx",
+    "filename": "plugins.mdx",
+    "size_bytes": 8838,
+    "line_count": 361,
+    "preview": "---\ntitle: Plugins\ndescription: Write your own plugins to extend OpenCode.\n---\n\nPlugins allow you to extend OpenCode by hooking into various events and customizing behavior. You can create plugins to add new features, integrate with external services, or modify OpenCode's default behavior.\n\nFor examples, check out the [plugins](/docs/ecosystem#plugins) created by the community.\n\n---\n"
+  }
+,
+  {
+    "path": "gitlab.mdx",
+    "filename": "gitlab.mdx",
+    "size_bytes": 6534,
+    "line_count": 195,
+    "preview": "---\ntitle: GitLab\ndescription: Use OpenCode in GitLab issues and merge requests.\n---\n\nOpenCode integrates with your GitLab workflow through your GitLab CI/CD pipeline or with GitLab Duo.\n\nIn both cases, OpenCode will run on your GitLab runners.\n\n---\n"
+  }
+,
+  {
+    "path": "github.mdx",
+    "filename": "github.mdx",
+    "size_bytes": 10861,
+    "line_count": 321,
+    "preview": "---\ntitle: GitHub\ndescription: Use OpenCode in GitHub issues and pull-requests.\n---\n\nOpenCode integrates with your GitHub workflow. Mention `/opencode` or `/oc` in your comment, and OpenCode will execute tasks within your GitHub Actions runner.\n\n---\n\n## Features\n"
+  }
+,
+  {
     "path": "sdks/vscode/README.md",
     "filename": "README.md",
     "size_bytes": 1764,
@@ -8,19 +96,75 @@
   }
 ,
   {
-    "path": "README.md",
-    "filename": "README.md",
-    "size_bytes": 5217,
-    "line_count": 113,
-    "preview": "<p align=\"center\">\n  <a href=\"https://opencode.ai\">\n    <picture>\n      <source srcset=\"packages/console/app/src/asset/logo-ornate-dark.svg\" media=\"(prefers-color-scheme: dark)\">\n      <source srcset=\"packages/console/app/src/asset/logo-ornate-light.svg\" media=\"(prefers-color-scheme: light)\">\n      <img src=\"packages/console/app/src/asset/logo-ornate-light.svg\" alt=\"OpenCode logo\">\n    </picture>\n  </a>\n</p>\n<p align=\"center\">The open source AI coding agent.</p>\n"
+    "path": "permissions.mdx",
+    "filename": "permissions.mdx",
+    "size_bytes": 5145,
+    "line_count": 192,
+    "preview": "---\ntitle: Permissions\ndescription: Control which actions require approval to run.\n---\n\nOpenCode uses the `permission` config to decide whether a given action should run automatically, prompt you, or be blocked.\n\nAs of `v1.1.1`, the legacy `tools` boolean config is deprecated and has been merged into `permission`. The old `tools` config is still supported for backwards compatibility.\n\n---\n"
   }
 ,
   {
-    "path": "README.zh-TW.md",
-    "filename": "README.zh-TW.md",
-    "size_bytes": 5568,
-    "line_count": 116,
-    "preview": "<p align=\"center\">\n  <a href=\"https://opencode.ai\">\n    <picture>\n      <source srcset=\"packages/console/app/src/asset/logo-ornate-dark.svg\" media=\"(prefers-color-scheme: dark)\">\n      <source srcset=\"packages/console/app/src/asset/logo-ornate-light.svg\" media=\"(prefers-color-scheme: light)\">\n      <img src=\"packages/console/app/src/asset/logo-ornate-light.svg\" alt=\"OpenCode logo\">\n    </picture>\n  </a>\n</p>\n<p align=\"center\">開源的 AI Coding Agent。</p>\n"
+    "path": "enterprise.mdx",
+    "filename": "enterprise.mdx",
+    "size_bytes": 5483,
+    "line_count": 170,
+    "preview": "---\ntitle: Enterprise\ndescription: Using OpenCode securely in your organization.\n---\n\nimport config from \"../../../config.mjs\"\nexport const email = `mailto:${config.email}`\n\nOpenCode Enterprise is for organizations that want to ensure that their code and data never leaves their infrastructure. It can do this by using a centralized config that integrates with your SSO and internal AI gateway.\n\n"
+  }
+,
+  {
+    "path": "themes.mdx",
+    "filename": "themes.mdx",
+    "size_bytes": 9878,
+    "line_count": 369,
+    "preview": "---\ntitle: Themes\ndescription: Select a built-in theme or define your own.\n---\n\nWith OpenCode you can select from one of several built-in themes, use a theme that adapts to your terminal theme, or define your own custom theme.\n\nBy default, OpenCode uses our own `opencode` theme.\n\n---\n"
+  }
+,
+  {
+    "path": "index.mdx",
+    "filename": "index.mdx",
+    "size_bytes": 8077,
+    "line_count": 356,
+    "preview": "---\ntitle: Intro\ndescription: Get started with OpenCode.\n---\n\nimport { Tabs, TabItem } from \"@astrojs/starlight/components\"\nimport config from \"../../../config.mjs\"\nexport const console = config.console\n\n[**OpenCode**](/) is an open source AI coding agent. It's available as a terminal-based interface, desktop app, or IDE extension.\n"
+  }
+,
+  {
+    "path": "keybinds.mdx",
+    "filename": "keybinds.mdx",
+    "size_bytes": 6144,
+    "line_count": 191,
+    "preview": "---\ntitle: Keybinds\ndescription: Customize your keybinds.\n---\n\nOpenCode has a list of keybinds that you can customize through the OpenCode config.\n\n```json title=\"opencode.json\"\n{\n  \"$schema\": \"https://opencode.ai/config.json\",\n"
+  }
+,
+  {
+    "path": "server.mdx",
+    "filename": "server.mdx",
+    "size_bytes": 18118,
+    "line_count": 286,
+    "preview": "---\ntitle: Server\ndescription: Interact with opencode server over HTTP.\n---\n\nimport config from \"../../../config.mjs\"\nexport const typesUrl = `${config.github}/blob/dev/packages/sdk/js/src/gen/types.gen.ts`\n\nThe `opencode serve` command runs a headless HTTP server that exposes an OpenAPI endpoint that an opencode client can use.\n\n"
+  }
+,
+  {
+    "path": "models.mdx",
+    "filename": "models.mdx",
+    "size_bytes": 5530,
+    "line_count": 223,
+    "preview": "---\ntitle: Models\ndescription: Configuring an LLM provider and model.\n---\n\nOpenCode uses the [AI SDK](https://ai-sdk.dev/) and [Models.dev](https://models.dev) to support **75+ LLM providers** and it supports running local models.\n\n---\n\n## Providers\n"
+  }
+,
+  {
+    "path": "rules.mdx",
+    "filename": "rules.mdx",
+    "size_bytes": 6330,
+    "line_count": 180,
+    "preview": "---\ntitle: Rules\ndescription: Set custom instructions for opencode.\n---\n\nYou can provide custom instructions to opencode by creating an `AGENTS.md` file. This is similar to Cursor's rules. It contains instructions that will be included in the LLM's context to customize its behavior for your specific project.\n\n---\n\n## Initialize\n"
+  }
+,
+  {
+    "path": "zen.mdx",
+    "filename": "zen.mdx",
+    "size_bytes": 12246,
+    "line_count": 245,
+    "preview": "---\ntitle: Zen\ndescription: Curated list of models provided by OpenCode.\n---\n\nimport config from \"../../../config.mjs\"\nexport const console = config.console\nexport const email = `mailto:${config.email}`\n\nOpenCode Zen is a list of tested and verified models provided by the OpenCode team.\n"
   }
 ,
   {
@@ -32,11 +176,19 @@
   }
 ,
   {
-    "path": "packages/web/README.md",
-    "filename": "README.md",
-    "size_bytes": 2634,
-    "line_count": 54,
-    "preview": "# Starlight Starter Kit: Basics\n\n[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)\n\n```\nnpm create astro@latest -- --template starlight\n```\n\n[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)\n[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)\n"
+    "path": "skills.mdx",
+    "filename": "skills.mdx",
+    "size_bytes": 4455,
+    "line_count": 220,
+    "preview": "---\ntitle: \"Agent Skills\"\ndescription: \"Define reusable behavior via SKILL.md definitions\"\n---\n\nAgent skills let OpenCode discover reusable instructions from your repo or home directory.\nSkills are loaded on-demand via the native `skill` tool—agents see available skills and can load the full content when needed.\n\n---\n\n"
+  }
+,
+  {
+    "path": "providers.mdx",
+    "filename": "providers.mdx",
+    "size_bytes": 41062,
+    "line_count": 1806,
+    "preview": "---\ntitle: Providers\ndescription: Using any LLM provider in OpenCode.\n---\n\nimport config from \"../../../config.mjs\"\nexport const console = config.console\n\nOpenCode uses the [AI SDK](https://ai-sdk.dev/) and [Models.dev](https://models.dev) to support **75+ LLM providers** and it supports running local models.\n\n"
   }
 ,
   {
@@ -312,11 +464,99 @@
   }
 ,
   {
-    "path": "README.zh-CN.md",
-    "filename": "README.zh-CN.md",
-    "size_bytes": 4982,
-    "line_count": 116,
-    "preview": "<p align=\"center\">\n  <a href=\"https://opencode.ai\">\n    <picture>\n      <source srcset=\"packages/console/app/src/asset/logo-ornate-dark.svg\" media=\"(prefers-color-scheme: dark)\">\n      <source srcset=\"packages/console/app/src/asset/logo-ornate-light.svg\" media=\"(prefers-color-scheme: light)\">\n      <img src=\"packages/console/app/src/asset/logo-ornate-light.svg\" alt=\"OpenCode logo\">\n    </picture>\n  </a>\n</p>\n<p align=\"center\">开源的 AI Coding Agent。</p>\n"
+    "path": "network.mdx",
+    "filename": "network.mdx",
+    "size_bytes": 1413,
+    "line_count": 57,
+    "preview": "---\ntitle: Network\ndescription: Configure proxies and custom certificates.\n---\n\nOpenCode supports standard proxy environment variables and custom certificates for enterprise network environments.\n\n---\n\n## Proxy\n"
+  }
+,
+  {
+    "path": "ide.mdx",
+    "filename": "ide.mdx",
+    "size_bytes": 1901,
+    "line_count": 48,
+    "preview": "---\ntitle: IDE\ndescription: The OpenCode extension for VS Code, Cursor, and other IDEs\n---\n\nOpenCode integrates with VS Code, Cursor, or any IDE that supports a terminal. Just run `opencode` in the terminal to get started.\n\n---\n\n## Usage\n"
+  }
+,
+  {
+    "path": "1-0.mdx",
+    "filename": "1-0.mdx",
+    "size_bytes": 1562,
+    "line_count": 67,
+    "preview": "---\ntitle: Migrating to 1.0\ndescription: What's new in OpenCode 1.0.\n---\n\nOpenCode 1.0 is a complete rewrite of the TUI.\n\nWe moved from the go+bubbletea based TUI which had performance and capability issues to an in-house framework (OpenTUI) written in zig+solidjs.\n\nThe new TUI works like the old one since it connects to the same opencode server.\n"
+  }
+,
+  {
+    "path": "share.mdx",
+    "filename": "share.mdx",
+    "size_bytes": 2916,
+    "line_count": 128,
+    "preview": "---\ntitle: Share\ndescription: Share your OpenCode conversations.\n---\n\nOpenCode's share feature allows you to create public links to your OpenCode conversations, so you can collaborate with teammates or get help from others.\n\n:::note\nShared conversations are publicly accessible to anyone with the link.\n:::\n"
+  }
+,
+  {
+    "path": "web.mdx",
+    "filename": "web.mdx",
+    "size_bytes": 2940,
+    "line_count": 132,
+    "preview": "---\ntitle: Web\ndescription: Using OpenCode in your browser.\n---\n\nOpenCode can run as a web application in your browser, providing the same powerful AI coding experience without needing a terminal.\n\n![OpenCode Web - New Session](../../assets/web/web-homepage-new-session.png)\n\n## Getting Started\n"
+  }
+,
+  {
+    "path": "ecosystem.mdx",
+    "filename": "ecosystem.mdx",
+    "size_bytes": 8192,
+    "line_count": 69,
+    "preview": "---\ntitle: Ecosystem\ndescription: Projects and integrations built with OpenCode.\n---\n\nA collection of community projects built on OpenCode.\n\n:::note\nWant to add your OpenCode related project to this list? Submit a PR.\n:::\n"
+  }
+,
+  {
+    "path": "custom-tools.mdx",
+    "filename": "custom-tools.mdx",
+    "size_bytes": 3938,
+    "line_count": 165,
+    "preview": "---\ntitle: Custom Tools\ndescription: Create tools the LLM can call in opencode.\n---\n\nCustom tools are functions you create that the LLM can call during conversations. They work alongside opencode's [built-in tools](/docs/tools) like `read`, `write`, and `bash`.\n\n---\n\n## Creating a tool\n"
+  }
+,
+  {
+    "path": "modes.mdx",
+    "filename": "modes.mdx",
+    "size_bytes": 8124,
+    "line_count": 331,
+    "preview": "---\ntitle: Modes\ndescription: Different modes for different use cases.\n---\n\n:::caution\nModes are now configured through the `agent` option in the opencode config. The\n`mode` option is now deprecated. [Learn more](/docs/agents).\n:::\n\n"
+  }
+,
+  {
+    "path": "troubleshooting.mdx",
+    "filename": "troubleshooting.mdx",
+    "size_bytes": 4318,
+    "line_count": 165,
+    "preview": "---\ntitle: Troubleshooting\ndescription: Common issues and how to resolve them.\n---\n\nTo debug any issues with OpenCode, you can check the logs or the session data\nthat it stores locally.\n\n---\n\n"
+  }
+,
+  {
+    "path": "mcp-servers.mdx",
+    "filename": "mcp-servers.mdx",
+    "size_bytes": 13826,
+    "line_count": 511,
+    "preview": "---\ntitle: MCP servers\ndescription: Add local and remote MCP tools.\n---\n\nYou can add external tools to OpenCode using the _Model Context Protocol_, or MCP. OpenCode supports both local and remote servers.\n\nOnce added, MCP tools are automatically available to the LLM alongside built-in tools.\n\n---\n"
+  }
+,
+  {
+    "path": "tui.mdx",
+    "filename": "tui.mdx",
+    "size_bytes": 7168,
+    "line_count": 390,
+    "preview": "---\ntitle: TUI\ndescription: Using the OpenCode terminal user interface.\n---\n\nimport { Tabs, TabItem } from \"@astrojs/starlight/components\"\n\nOpenCode provides an interactive terminal interface or TUI for working on your projects with an LLM.\n\nRunning OpenCode starts the TUI for the current directory.\n"
+  }
+,
+  {
+    "path": "commands.mdx",
+    "filename": "commands.mdx",
+    "size_bytes": 6766,
+    "line_count": 323,
+    "preview": "---\ntitle: Commands\ndescription: Create custom commands for repetitive tasks.\n---\n\nCustom commands let you specify a prompt you want to run when that command is executed in the TUI.\n\n```bash frame=\"none\"\n/my-command\n```\n"
   }
 
 ]
