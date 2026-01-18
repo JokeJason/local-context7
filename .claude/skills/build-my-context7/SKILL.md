@@ -9,24 +9,37 @@ Download and filter documentation from manifests for Context7 integration.
 
 ## Quick Start
 
-Invoke this skill to process all documentation manifests. Output goes to `output/`.
+```
+/build-my-context7              # Process ALL manifests
+/build-my-context7 zod-docs     # Process only zod-docs manifest
+```
+
+Output goes to `output/`.
 
 ## Workflow
 
-### Phase 1: Discovery
+### Phase 1: Check Arguments
 
-List all manifests:
+Check if `$ARGUMENTS` is provided:
+- If **argument provided**: Process only that specific manifest
+- If **no argument**: Process all manifests
+
+### Phase 2: Discovery
+
+**If processing a specific manifest:**
+- Verify the manifest exists at `.claude/skills/download-docs/scripts/manifests/{argument}.json`
+- If not found, list available manifests and ask user to choose
+
+**If processing all manifests:**
+- List all manifests:
 ```bash
 ls .claude/skills/download-docs/scripts/manifests/*.json
 ```
+- Extract manifest names (without .json extension)
 
-Extract manifest names (without .json extension) for spawning sub-agents.
+### Phase 3: Processing
 
-### Phase 2: Parallel Processing
-
-**CRITICAL**: Spawn ALL sub-agents in a SINGLE message for maximum parallelism.
-
-For EACH manifest, spawn a `manifest-processor` sub-agent:
+Spawn `manifest-processor` sub-agent(s):
 
 ```
 Task tool call:
@@ -40,17 +53,11 @@ The sub-agent handles everything:
 - Applies AI filtering for GitHub sources (skips for URL sources)
 - Returns a summary
 
-**Example** - if there are 4 manifests, spawn 4 sub-agents in ONE message:
-```
-Task(manifest-processor): "claude-code-docs"
-Task(manifest-processor): "codex-docs"
-Task(manifest-processor): "langchain-docs"
-Task(manifest-processor): "opencode-docs"
-```
+**For multiple manifests**: Spawn ALL sub-agents in a SINGLE message for maximum parallelism.
 
-### Phase 3: Summary
+### Phase 4: Summary
 
-After all sub-agents complete, compile results into a summary table:
+After sub-agent(s) complete, compile results into a summary table:
 
 | Manifest | Source | Downloaded | Filtered | Final | Status |
 |----------|--------|------------|----------|-------|--------|

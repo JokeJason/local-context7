@@ -1,126 +1,113 @@
+---
+name: generate-agent-skills
+description: Generate documentation skills for AI agents from downloaded docs. Use after /build-my-context7 to create skills.
+---
+
 # Generate Agent Skills
 
 Generate documentation skills for each AI agent using the latest skill specifications from downloaded docs.
 
 ## Usage
 
-Run `/generate-agent-skills` after `/build-my-context7` to generate skills based on the latest documentation.
+```
+/generate-agent-skills              # Generate ALL skills
+/generate-agent-skills zod-docs     # Generate only zod-docs skill
+```
 
-## How It Works
-
-This skill reads the downloaded documentation to understand each agent's current skill format, then generates appropriate skills. Documentation files are stored once in a shared location, with each agent's skill containing only its SKILL.md and a symlink to the shared references.
+Run after `/build-my-context7` to generate skills based on the latest documentation.
 
 ## Instructions
 
-When this skill is invoked:
+### Step 1: Check Arguments
 
-### Step 1: Verify docs exist
+Check if `$ARGUMENTS` is provided:
+- If **argument provided**: Generate only that specific skill
+- If **no argument**: Generate all skills from `output/*-docs/`
 
-Check that `output/` contains downloaded documentation:
-- `output/claude-code-docs/`
-- `output/codex-docs/`
-- `output/opencode-docs/`
+### Step 2: Verify docs exist
 
-If missing, tell user to run `/build-my-context7` first.
+**If processing a specific skill:**
+- Verify `output/{argument}/` exists
+- If not found, tell user to run `/build-my-context7 {argument}` first
 
-### Step 2: Read skill specifications
+**If processing all skills:**
+- Check that `output/` contains downloaded documentation directories
+- If empty, tell user to run `/build-my-context7` first
+
+### Step 3: Read skill specifications (only needed once per session)
 
 For each agent, read its skill documentation to understand the current format:
 
 **Claude Code:**
 - Read `output/claude-code-docs/build-with-claude-code/agent-skills.md`
 - Note: YAML frontmatter with `name`, `description`, optional `allowed-tools`
-- Note: `references/` folder for documentation files
 
 **Codex CLI:**
 - Read `output/codex-docs/configuration/skills/overview.md`
-- Read `output/codex-docs/configuration/skills/create-skill.md`
 - Note: YAML frontmatter with `name`, `description`
-- Note: `references/` folder for documentation
 
 **OpenCode:**
 - Read `output/opencode-docs/skills.mdx`
 - Note: YAML frontmatter with `name` (lowercase, hyphens), `description`
-- Note: skill locations and format requirements
 
-### Step 3: Create shared documentation
-
-Create shared documentation directory and copy docs once:
+### Step 4: Create/update shared documentation
 
 ```bash
-# Create shared directory
 mkdir -p dotfiles/shared
 
-# For each documentation set, copy to shared location
-cp -r output/claude-code-docs dotfiles/shared/
-cp -r output/codex-docs dotfiles/shared/
-cp -r output/opencode-docs dotfiles/shared/
+# For specific skill:
+rm -rf dotfiles/shared/{skill-name}
+cp -r output/{skill-name} dotfiles/shared/
+
+# For all skills:
+for dir in output/*-docs; do
+  name=$(basename "$dir")
+  rm -rf "dotfiles/shared/$name"
+  cp -r "$dir" "dotfiles/shared/$name"
+done
 ```
 
-### Step 4: Generate skills for each agent
+### Step 5: Generate skills for each agent
 
-For each agent (Claude, Codex, OpenCode), create skills in `dotfiles/<agent>/skills/`:
+For each agent (Claude, Codex, OpenCode), create/update skills in `dotfiles/<agent>/skills/`:
 
-1. **claude-code-docs** - Claude Code reference documentation
-2. **codex-docs** - Codex CLI reference documentation
-3. **opencode-docs** - OpenCode reference documentation
-
-For each skill:
 1. Create directory: `dotfiles/<agent>/skills/<skill-name>/`
-2. Create `SKILL.md` following the agent's format from Step 2
+2. Create `SKILL.md` following the agent's format
 3. Do NOT create `references/` - the install script handles this
 
-**Example commands:**
-```bash
-# Create skill directory
-mkdir -p dotfiles/claude/skills/opencode-docs
+**SKILL.md template:**
+```yaml
+---
+name: {skill-name}
+description: Local {Library} documentation reference. Use when asked about {topics}.
+---
 
-# Create SKILL.md (with appropriate content)
-# ... write SKILL.md file ...
+# {Library} Documentation
 
-# No symlinks needed - install.sh creates them at install time
+This skill provides local reference documentation for {Library}.
+
+## When to use
+
+Use this skill when the user asks about:
+- {topic 1}
+- {topic 2}
+- ...
+
+## Available documentation
+
+See the `references/` folder for the full documentation.
 ```
-
-### Step 5: Adapt to spec changes
-
-If the skill documentation shows different requirements than current implementation:
-- Update SKILL.md format accordingly
-- Adjust directory structure if needed
-- Report what changes were made
 
 ### Step 6: Report results
 
 Summarize:
-- Which agents were processed
 - Which skills were generated/updated
-- Any format changes detected
-- Disk space saved by using shared docs
+- Which agents were updated
+- Disk space used by shared docs
 
-**Recommend next step**: Tell the user to run `/install-agent-skills` to deploy the generated skills to system locations.
-
-## Target Structure
-
-```
-dotfiles/
-├── shared/                      # Single copy of all documentation
-│   ├── claude-code-docs/
-│   ├── codex-docs/
-│   └── opencode-docs/
-├── claude/skills/
-│   ├── claude-code-docs/
-│   │   └── SKILL.md             # Only SKILL.md, no references/
-│   ├── codex-docs/
-│   │   └── SKILL.md
-│   └── opencode-docs/
-│       └── SKILL.md
-├── codex/skills/
-│   └── (same structure)
-└── opencode/skills/
-    └── (same structure)
-```
+**Recommend next step**: Tell the user to run `/install-agent-skills` (or `/install-agent-skills {skill-name}`) to deploy.
 
 ## Important
 
-- Always read the latest skill documentation before generating. Do not assume formats are static.
 - Do NOT create `references/` folders - the install script creates symlinks at install time.
 - The shared docs are stored once, reducing repo size significantly.

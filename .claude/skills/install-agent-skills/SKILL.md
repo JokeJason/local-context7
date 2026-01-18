@@ -1,10 +1,20 @@
+---
+name: install-agent-skills
+description: Deploy generated skills to system locations. Use after /generate-agent-skills to install skills.
+---
+
 # Install Agent Skills
 
 Deploy generated skills from `dotfiles/` to system locations.
 
 ## Usage
 
-Run `/install-agent-skills` after `/generate-agent-skills`.
+```
+/install-agent-skills              # Install ALL skills
+/install-agent-skills zod-docs     # Install only zod-docs skill
+```
+
+Run after `/generate-agent-skills`.
 
 ## How It Works
 
@@ -16,20 +26,42 @@ This keeps the repo clean (no symlinks) while installed skills link to shared do
 
 ## Instructions
 
-### Step 1: Verify skills exist
+### Step 1: Check Arguments
 
-Check that `dotfiles/` contains generated skills:
-- `dotfiles/shared/` (shared documentation)
-- `dotfiles/claude/skills/`
-- `dotfiles/codex/skills/`
-- `dotfiles/opencode/skills/`
+Check if `$ARGUMENTS` is provided:
+- If **argument provided**: Install only that specific skill
+- If **no argument**: Install all skills
 
-If missing, tell user to run `/generate-agent-skills` first.
+### Step 2: Verify skills exist
 
-### Step 2: Install skills
+**If installing a specific skill:**
+- Verify `dotfiles/shared/{argument}/` exists
+- Verify `dotfiles/claude/skills/{argument}/` exists
+- If not found, tell user to run `/generate-agent-skills {argument}` first
 
-Use the install.sh script to install each skill:
+**If installing all skills:**
+- Check that `dotfiles/shared/` and `dotfiles/*/skills/` contain skills
+- If empty, tell user to run `/generate-agent-skills` first
 
+### Step 3: Install skills
+
+Use the install.sh script:
+
+**For a specific skill:**
+```bash
+SKILL="{argument}"
+
+# Claude Code
+.claude/skills/install-agent-skills/scripts/install.sh "dotfiles/claude/skills/$SKILL" ~/.claude/skills
+
+# Codex CLI
+.claude/skills/install-agent-skills/scripts/install.sh "dotfiles/codex/skills/$SKILL" ~/.codex/skills
+
+# OpenCode
+.claude/skills/install-agent-skills/scripts/install.sh "dotfiles/opencode/skills/$SKILL" ~/.config/opencode/skills
+```
+
+**For all skills:**
 ```bash
 # Claude Code skills -> ~/.claude/skills/
 for skill in dotfiles/claude/skills/*/; do
@@ -47,7 +79,7 @@ for skill in dotfiles/opencode/skills/*/; do
 done
 ```
 
-### Step 3: Report results
+### Step 4: Report results
 
 Summarize skills installed per agent.
 
