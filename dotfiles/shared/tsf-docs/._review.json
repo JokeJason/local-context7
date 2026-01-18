@@ -1,0 +1,1658 @@
+[
+  {
+    "path": "overview.md",
+    "filename": "overview.md",
+    "size_bytes": 24153,
+    "line_count": 842,
+    "preview": "---\nid: overview\ntitle: Overview\n---\n\nTanStack Form is the ultimate solution for handling forms in web applications, providing a powerful and flexible approach to form management. Designed with first-class TypeScript support, headless UI components, and a framework-agnostic design, it streamlines form handling and ensures a seamless experience across various front-end frameworks.\n\n## Motivation\n\nMost web frameworks do not offer a comprehensive solution for form handling, leaving developers to create their own custom implementations or rely on less-capable libraries. This often results in a lack of consistency, poor performance, and increased development time. TanStack Form aims to address these challenges by providing an all-in-one solution for managing forms that is both powerful and easy to use.\n"
+  }
+,
+  {
+    "path": "framework/svelte/quick-start.md",
+    "filename": "quick-start.md",
+    "size_bytes": 1133,
+    "line_count": 49,
+    "preview": "---\nid: quick-start\ntitle: Quick Start\n---\n\nThe bare minimum to get started with TanStack Form is to create a form and add a field. Keep in mind that this example does not include any validation or error handling... yet.\n\n```svelte\n<script>\n  import { createForm } from '@tanstack/svelte-form'\n"
+  }
+,
+  {
+    "path": "framework/svelte/guides/linked-fields.md",
+    "filename": "linked-fields.md",
+    "size_bytes": 2182,
+    "line_count": 77,
+    "preview": "---\nid: linked-fields\ntitle: Link Two Form Fields Together\n---\n\nYou may find yourself needing to link two fields together; when one is validated as another field's value has changed.\nOne such usage is when you have both a `password` and `confirm_password` field,\nwhere you want to `confirm_password` to error out when `password`'s value does not match;\nregardless of which field triggered the value change.\n\n"
+  }
+,
+  {
+    "path": "framework/svelte/guides/validation.md",
+    "filename": "validation.md",
+    "size_bytes": 12509,
+    "line_count": 408,
+    "preview": "---\nid: form-validation\ntitle: Form and Field Validation\n---\n\nAt the core of TanStack Form's functionalities is the concept of validation. TanStack Form makes validation highly customizable:\n\n- You can control when to perform the validation (on change, on input, on blur, on submit...)\n- Validation rules can be defined at the field level or at the form level\n- Validation can be synchronous or asynchronous (for example, as a result of an API call)\n"
+  }
+,
+  {
+    "path": "framework/svelte/guides/async-initial-values.md",
+    "filename": "async-initial-values.md",
+    "size_bytes": 1753,
+    "line_count": 51,
+    "preview": "---\nid: async-initial-values\ntitle: Async Initial Values\n---\n\nLet's say that you want to fetch some data from an API and use it as the initial value of a form.\n\nWhile this problem sounds simple on the surface, there are hidden complexities you might not have thought of thus far.\n\nFor example, you might want to show a loading spinner while the data is being fetched, or you might want to handle errors gracefully.\n"
+  }
+,
+  {
+    "path": "framework/svelte/guides/arrays.md",
+    "filename": "arrays.md",
+    "size_bytes": 2480,
+    "line_count": 112,
+    "preview": "---\nid: arrays\ntitle: Arrays\n---\n\nTanStack Form supports arrays as values in a form, including sub-object values inside of an array.\n\n## Basic Usage\n\nTo use an array, you can use `field.state.value` on an array value in conjunction\n"
+  }
+,
+  {
+    "path": "framework/svelte/guides/dynamic-validation.md",
+    "filename": "dynamic-validation.md",
+    "size_bytes": 5867,
+    "line_count": 225,
+    "preview": "---\nid: dynamic-validation\ntitle: Dynamic Validation\n---\n\nIn many cases, you want to change the validation rules based depending on the state of the form or other conditions. The most popular\nexample of this is when you want to validate a field differently based on whether the user has submitted the form for the first time or not.\n\nWe support this through our `onDynamic` validation function.\n\n"
+  }
+,
+  {
+    "path": "framework/svelte/guides/basic-concepts.md",
+    "filename": "basic-concepts.md",
+    "size_bytes": 9817,
+    "line_count": 319,
+    "preview": "---\nid: basic-concepts\ntitle: Basic Concepts and Terminology\n---\n\nThis page introduces the basic concepts and terminology used in the `@tanstack/svelte-form` library. Familiarizing yourself with these concepts will help you better understand and work with the library.\n\n## Form Options\n\nYou can create options for your form so that it can be shared between multiple forms by using the `formOptions` function.\n"
+  }
+,
+  {
+    "path": "framework/svelte/guides/form-composition.md",
+    "filename": "form-composition.md",
+    "size_bytes": 13265,
+    "line_count": 507,
+    "preview": "---\nid: form-composition\ntitle: Form Composition\n---\n\nA common criticism of TanStack Form is its verbosity out-of-the-box. While this _can_ be useful for educational purposes - helping enforce understanding our APIs - it's not ideal in production use cases.\n\nAs a result, while `form.Field` enables the most powerful and flexible usage of TanStack Form, we provide APIs that wrap it and make your application code less verbose.\n\n## Custom Form Methods\n"
+  }
+,
+  {
+    "path": "framework/lit/quick-start.md",
+    "filename": "quick-start.md",
+    "size_bytes": 2249,
+    "line_count": 83,
+    "preview": "---\nid: quick-start\ntitle: Quick Start\n---\n\nThe bare minimum to get started with TanStack Form is to create a `TanstackFormController` as seen below with the `Employee` interface for our test form:\n\n```ts\ninterface Employee {\n  firstName: string\n"
+  }
+,
+  {
+    "path": "framework/lit/guides/validation.md",
+    "filename": "validation.md",
+    "size_bytes": 18466,
+    "line_count": 633,
+    "preview": "---\nid: form-validation\ntitle: Form and Field Validation\n---\n\nAt the core of TanStack Form's functionalities is the concept of validation. TanStack Form makes validation highly customizable:\n\n- You can control when to perform the validation (on change, on input, on blur, on submit...)\n- Validation rules can be defined at the field level or at the form level\n- Validation can be synchronous or asynchronous (for example, as a result of an API call)\n"
+  }
+,
+  {
+    "path": "framework/lit/guides/arrays.md",
+    "filename": "arrays.md",
+    "size_bytes": 4198,
+    "line_count": 174,
+    "preview": "---\nid: arrays\ntitle: Arrays\n---\n\nTanStack Form supports arrays as values in a form, including sub-object values inside of an array.\n\n## Basic Usage\n\nTo use an array, you can use `field.state.value` on an array value, as in:\n"
+  }
+,
+  {
+    "path": "framework/lit/guides/dynamic-validation.md",
+    "filename": "dynamic-validation.md",
+    "size_bytes": 7663,
+    "line_count": 269,
+    "preview": "---\nid: dynamic-validation\ntitle: Dynamic Validation\n---\n\nIn many cases, you want to change the validation rules based depending on the state of the form or other conditions. The most popular\nexample of this is when you want to validate a field differently based on whether the user has submitted the form for the first time or not.\n\nWe support this through our `onDynamic` validation function.\n\n"
+  }
+,
+  {
+    "path": "framework/lit/guides/basic-concepts.md",
+    "filename": "basic-concepts.md",
+    "size_bytes": 4543,
+    "line_count": 132,
+    "preview": "---\nid: basic-concepts\ntitle: Basic Concepts and Terminology\n---\n\nThis page introduces the basic concepts and terminology used in the `@tanstack/lit-form` library. Familiarizing yourself with these concepts will help you better understand and work with the library and its usage with Lit.\n\n## Form Options\n\nYou can create options for your form so that it can be shared between multiple forms by using the `formOptions` function.\n"
+  }
+,
+  {
+    "path": "framework/lit/reference/classes/TanStackFormController.md",
+    "filename": "TanStackFormController.md",
+    "size_bytes": 7217,
+    "line_count": 239,
+    "preview": "---\nid: TanStackFormController\ntitle: TanStackFormController\n---\n\n# Class: TanStackFormController\\<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TSubmitMeta\\>\n\nDefined in: [tanstack-form-controller.ts:222](https://github.com/TanStack/form/blob/main/packages/lit-form/src/tanstack-form-controller.ts#L222)\n\n## Type Parameters\n"
+  }
+,
+  {
+    "path": "framework/lit/reference/index.md",
+    "filename": "index.md",
+    "size_bytes": 158,
+    "line_count": 10,
+    "preview": "---\nid: \"@tanstack/lit-form\"\ntitle: \"@tanstack/lit-form\"\n---\n\n# @tanstack/lit-form\n\n## Classes\n\n- [TanStackFormController](classes/TanStackFormController.md)\n"
+  }
+,
+  {
+    "path": "framework/vue/quick-start.md",
+    "filename": "quick-start.md",
+    "size_bytes": 1099,
+    "line_count": 45,
+    "preview": "---\nid: quick-start\ntitle: Quick Start\n---\n\nThe bare minimum to get started with TanStack Form is to create a form and add a field. Keep in mind that this example does not include any validation or error handling... yet.\n\n```vue\n<!-- App.vue -->\n<script setup>\n"
+  }
+,
+  {
+    "path": "framework/vue/guides/linked-fields.md",
+    "filename": "linked-fields.md",
+    "size_bytes": 2528,
+    "line_count": 82,
+    "preview": "---\nid: linked-fields\ntitle: Link Two Form Fields Together\n---\n\nYou may find yourself needing to link two fields together; when one is validated as another field's value has changed.\nOne such usage is when you have both a `password` and `confirm_password` field,\nwhere you want to `confirm_password` to error out when `password`'s value does not match;\nregardless of which field triggered the value change.\n\n"
+  }
+,
+  {
+    "path": "framework/vue/guides/submission-handling.md",
+    "filename": "submission-handling.md",
+    "size_bytes": 2573,
+    "line_count": 99,
+    "preview": "---\nid: submission-handling\ntitle: Submission handling\n---\n\n## Passing additional data to submission handling\n\nYou may have multiple types of submission behaviour, for example, going back to another page or staying on the form.\nYou can accomplish this by specifying the `onSubmitMeta` property. This meta data will be passed to the `onSubmit` function.\n\n"
+  }
+,
+  {
+    "path": "framework/vue/guides/validation.md",
+    "filename": "validation.md",
+    "size_bytes": 16908,
+    "line_count": 587,
+    "preview": "---\nid: form-validation\ntitle: Form and Field Validation\n---\n\nAt the core of TanStack Form's functionalities is the concept of validation. TanStack Form makes validation highly customizable:\n\n- You can control when to perform the validation (on change, on input, on blur, on submit...)\n- Validation rules can be defined at the field level or at the form level\n- Validation can be synchronous or asynchronous (for example, as a result of an API call)\n"
+  }
+,
+  {
+    "path": "framework/vue/guides/async-initial-values.md",
+    "filename": "async-initial-values.md",
+    "size_bytes": 1877,
+    "line_count": 59,
+    "preview": "---\nid: async-initial-values\ntitle: Async Initial Values\n---\n\nLet's say that you want to fetch some data from an API and use it as the initial value of a form.\n\nWhile this problem sounds simple on the surface, there are hidden complexities you might not have thought of thus far.\n\nFor example, you might want to show a loading spinner while the data is being fetched, or you might want to handle errors gracefully.\n"
+  }
+,
+  {
+    "path": "framework/vue/guides/listeners.md",
+    "filename": "listeners.md",
+    "size_bytes": 1695,
+    "line_count": 65,
+    "preview": "---\nid: listeners\ntitle: Side effects for event triggers\n---\n\nFor situations where you want to \"affect\" or \"react\" to triggers, there's the listener API. For example, if you, as the developer, want to reset a form field as a result of another field changing, you would use the listener API.\n\nImagine the following user flow:\n\n- User selects a country from a drop-down.\n"
+  }
+,
+  {
+    "path": "framework/vue/guides/arrays.md",
+    "filename": "arrays.md",
+    "size_bytes": 3458,
+    "line_count": 149,
+    "preview": "---\nid: arrays\ntitle: Arrays\n---\n\nTanStack Form supports arrays as values in a form, including sub-object values inside of an array.\n\n## Basic Usage\n\nTo use an array, you can use `field.state.value` on an array value in conjunction\n"
+  }
+,
+  {
+    "path": "framework/vue/guides/dynamic-validation.md",
+    "filename": "dynamic-validation.md",
+    "size_bytes": 5973,
+    "line_count": 240,
+    "preview": "---\nid: dynamic-validation\ntitle: Dynamic Validation\n---\n\nIn many cases, you want to change the validation rules based depending on the state of the form or other conditions. The most popular\nexample of this is when you want to validate a field differently based on whether the user has submitted the form for the first time or not.\n\nWe support this through our `onDynamic` validation function.\n\n"
+  }
+,
+  {
+    "path": "framework/vue/guides/basic-concepts.md",
+    "filename": "basic-concepts.md",
+    "size_bytes": 11912,
+    "line_count": 381,
+    "preview": "---\nid: basic-concepts\ntitle: Basic Concepts and Terminology\n---\n\nThis page introduces the basic concepts and terminology used in the `@tanstack/vue-form` library. Familiarizing yourself with these concepts will help you better understand and work with the library.\n\n## Form Options\n\nYou can create options for your form so that it can be shared between multiple forms by using the `formOptions` function.\n"
+  }
+,
+  {
+    "path": "framework/vue/reference/type-aliases/FieldComponentProps.md",
+    "filename": "FieldComponentProps.md",
+    "size_bytes": 3553,
+    "line_count": 106,
+    "preview": "---\nid: FieldComponentProps\ntitle: FieldComponentProps\n---\n\n# Type Alias: FieldComponentProps\\<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta\\>\n\n```ts\ntype FieldComponentProps<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta> = UseFieldOptions<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta>;\n```\n"
+  }
+,
+  {
+    "path": "framework/vue/reference/type-aliases/FieldComponentBoundProps.md",
+    "filename": "FieldComponentBoundProps.md",
+    "size_bytes": 1947,
+    "line_count": 62,
+    "preview": "---\nid: FieldComponentBoundProps\ntitle: FieldComponentBoundProps\n---\n\n# Type Alias: FieldComponentBoundProps\\<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync\\>\n\n```ts\ntype FieldComponentBoundProps<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync> = UseFieldOptionsBound<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync>;\n```\n"
+  }
+,
+  {
+    "path": "framework/vue/reference/type-aliases/FieldComponent.md",
+    "filename": "FieldComponent.md",
+    "size_bytes": 4566,
+    "line_count": 94,
+    "preview": "---\nid: FieldComponent\ntitle: FieldComponent\n---\n\n# Type Alias: FieldComponent()\\<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta\\>\n\n```ts\ntype FieldComponent<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta> = <TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync>(props) => CreateComponentPublicInstanceWithMixins<FieldComponentBoundProps<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync>, {\n}, {\n"
+  }
+,
+  {
+    "path": "framework/vue/reference/type-aliases/UseField.md",
+    "filename": "UseField.md",
+    "size_bytes": 4282,
+    "line_count": 130,
+    "preview": "---\nid: UseField\ntitle: UseField\n---\n\n# Type Alias: UseField()\\<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta\\>\n\n```ts\ntype UseField<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta> = <TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync>(opts) => object;\n```\n"
+  }
+,
+  {
+    "path": "framework/vue/reference/index.md",
+    "filename": "index.md",
+    "size_bytes": 589,
+    "line_count": 28,
+    "preview": "---\nid: \"@tanstack/vue-form\"\ntitle: \"@tanstack/vue-form\"\n---\n\n# @tanstack/vue-form\n\n## Interfaces\n\n- [VueFieldApi](interfaces/VueFieldApi.md)\n"
+  }
+,
+  {
+    "path": "framework/vue/reference/variables/Field.md",
+    "filename": "Field.md",
+    "size_bytes": 2245,
+    "line_count": 48,
+    "preview": "---\nid: Field\ntitle: Field\n---\n\n# Variable: Field()\n\n```ts\nconst Field: <TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta>(props) => CreateComponentPublicInstanceWithMixins<UseFieldOptions<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta> & \n  | {\n"
+  }
+,
+  {
+    "path": "framework/vue/reference/functions/useForm.md",
+    "filename": "useForm.md",
+    "size_bytes": 2711,
+    "line_count": 72,
+    "preview": "---\nid: useForm\ntitle: useForm\n---\n\n# Function: useForm()\n\n```ts\nfunction useForm<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TSubmitMeta>(opts?): FormApi<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TSubmitMeta> & VueFormApi<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TSubmitMeta>;\n```\n"
+  }
+,
+  {
+    "path": "framework/vue/reference/functions/useField.md",
+    "filename": "useField.md",
+    "size_bytes": 4502,
+    "line_count": 128,
+    "preview": "---\nid: useField\ntitle: useField\n---\n\n# Function: useField()\n\n```ts\nfunction useField<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta>(opts): object;\n```\n"
+  }
+,
+  {
+    "path": "framework/vue/reference/functions/useStore.md",
+    "filename": "useStore.md",
+    "size_bytes": 1069,
+    "line_count": 70,
+    "preview": "---\nid: useStore\ntitle: useStore\n---\n\n# Function: useStore()\n\n## Call Signature\n\n```ts\n"
+  }
+,
+  {
+    "path": "framework/vue/reference/interfaces/VueFieldApi.md",
+    "filename": "VueFieldApi.md",
+    "size_bytes": 1930,
+    "line_count": 68,
+    "preview": "---\nid: VueFieldApi\ntitle: VueFieldApi\n---\n\n# Interface: VueFieldApi\\<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta\\>\n\nDefined in: [packages/vue-form/src/useField.tsx:158](https://github.com/TanStack/form/blob/main/packages/vue-form/src/useField.tsx#L158)\n\n## Type Parameters\n"
+  }
+,
+  {
+    "path": "framework/vue/reference/interfaces/VueFormApi.md",
+    "filename": "VueFormApi.md",
+    "size_bytes": 3266,
+    "line_count": 114,
+    "preview": "---\nid: VueFormApi\ntitle: VueFormApi\n---\n\n# Interface: VueFormApi\\<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TSubmitMeta\\>\n\nDefined in: [packages/vue-form/src/useForm.tsx:125](https://github.com/TanStack/form/blob/main/packages/vue-form/src/useForm.tsx#L125)\n\n## Type Parameters\n"
+  }
+,
+  {
+    "path": "framework/angular/quick-start.md",
+    "filename": "quick-start.md",
+    "size_bytes": 1570,
+    "line_count": 59,
+    "preview": "---\nid: quick-start\ntitle: Quick Start\n---\n\nThe bare minimum to get started with TanStack Form is to create a form and add a field. Keep in mind that this example does not include any validation or error handling... yet.\n\n```angular-ts\nimport { Component } from '@angular/core'\nimport { bootstrapApplication } from '@angular/platform-browser'\n"
+  }
+,
+  {
+    "path": "framework/angular/guides/submission-handling.md",
+    "filename": "submission-handling.md",
+    "size_bytes": 2753,
+    "line_count": 104,
+    "preview": "---\nid: submission-handling\ntitle: Submission handling\n---\n\n## Passing additional data to submission handling\n\nYou may have multiple types of submission behaviour, for example, going back to another page or staying on the form.\nYou can accomplish this by specifying the `onSubmitMeta` property. This meta data will be passed to the `onSubmit` function.\n\n"
+  }
+,
+  {
+    "path": "framework/angular/guides/validation.md",
+    "filename": "validation.md",
+    "size_bytes": 20127,
+    "line_count": 692,
+    "preview": "---\nid: form-validation\ntitle: Form and Field Validation\n---\n\nAt the core of TanStack Form's functionalities is the concept of validation. TanStack Form makes validation highly customizable:\n\n- You can control when to perform the validation (on change, on input, on blur, on submit...)\n- Validation rules can be defined at the field level or at the form level\n- Validation can be synchronous or asynchronous (for example, as a result of an API call)\n"
+  }
+,
+  {
+    "path": "framework/angular/guides/listeners.md",
+    "filename": "listeners.md",
+    "size_bytes": 1562,
+    "line_count": 61,
+    "preview": "---\nid: listeners\ntitle: Side effects for event triggers\n---\n\nFor situations where you want to \"affect\" or \"react\" to triggers, there's the listener API. For example, if you, as the developer, want to reset a form field as a result of another field changing, you would use the listener API.\n\nImagine the following user flow:\n\n- User selects a country from a drop-down.\n"
+  }
+,
+  {
+    "path": "framework/angular/guides/arrays.md",
+    "filename": "arrays.md",
+    "size_bytes": 4157,
+    "line_count": 160,
+    "preview": "---\nid: arrays\ntitle: Arrays\n---\n\nTanStack Form supports arrays as values in a form, including sub-object values inside of an array.\n\n## Basic Usage\n\nTo use an array, you can use `field.api.state.value` on an array value:\n"
+  }
+,
+  {
+    "path": "framework/angular/guides/dynamic-validation.md",
+    "filename": "dynamic-validation.md",
+    "size_bytes": 7940,
+    "line_count": 297,
+    "preview": "---\nid: dynamic-validation\ntitle: Dynamic Validation\n---\n\nIn many cases, you want to change the validation rules based depending on the state of the form or other conditions. The most popular\nexample of this is when you want to validate a field differently based on whether the user has submitted the form for the first time or not.\n\nWe support this through our `onDynamic` validation function.\n\n"
+  }
+,
+  {
+    "path": "framework/angular/guides/basic-concepts.md",
+    "filename": "basic-concepts.md",
+    "size_bytes": 11110,
+    "line_count": 364,
+    "preview": "---\nid: basic-concepts\ntitle: Basic Concepts and Terminology\n---\n\nThis page introduces the basic concepts and terminology used in the `@tanstack/angular-form` library. Familiarizing yourself with these concepts will help you better understand and work with the library.\n\n## Form Instance\n\nA Form Instance is an object that represents an individual form and provides methods and properties for working with the form. You create a form instance using the `injectForm` function. The hook accepts an object with an `onSubmit` function, which is called when the form is submitted.\n"
+  }
+,
+  {
+    "path": "framework/angular/guides/form-composition.md",
+    "filename": "form-composition.md",
+    "size_bytes": 5112,
+    "line_count": 178,
+    "preview": "---\nid: form-composition\ntitle: Form Composition\n---\n\nA common criticism of TanStack Form is its verbosity out-of-the-box. While this _can_ be useful for educational purposes - helping enforce understanding our APIs - it's not ideal in production use cases.\n\nAs a result, while basic usage of `[tanstackField]` enables the most powerful and flexible usage of TanStack Form, we provide APIs that wrap it and make your application code less verbose.\n\n## Pre-bound Field Components\n"
+  }
+,
+  {
+    "path": "framework/angular/reference/classes/TanStackField.md",
+    "filename": "TanStackField.md",
+    "size_bytes": 9791,
+    "line_count": 312,
+    "preview": "---\nid: TanStackField\ntitle: TanStackField\n---\n\n# Class: TanStackField\\<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TSubmitMeta\\>\n\nDefined in: [tanstack-field.ts:37](https://github.com/TanStack/form/blob/main/packages/angular-form/src/tanstack-field.ts#L37)\n\n## Extended by\n"
+  }
+,
+  {
+    "path": "framework/angular/reference/classes/TanStackAppField.md",
+    "filename": "TanStackAppField.md",
+    "size_bytes": 11935,
+    "line_count": 380,
+    "preview": "---\nid: TanStackAppField\ntitle: TanStackAppField\n---\n\n# Class: TanStackAppField\\<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TSubmitMeta\\>\n\nDefined in: [app-field.ts:20](https://github.com/TanStack/form/blob/main/packages/angular-form/src/app-field.ts#L20)\n\n## Extends\n"
+  }
+,
+  {
+    "path": "framework/angular/reference/classes/TanStackFieldInjectable.md",
+    "filename": "TanStackFieldInjectable.md",
+    "size_bytes": 1207,
+    "line_count": 52,
+    "preview": "---\nid: TanStackFieldInjectable\ntitle: TanStackFieldInjectable\n---\n\n# Class: TanStackFieldInjectable\\<T\\>\n\nDefined in: [injectable.ts:5](https://github.com/TanStack/form/blob/main/packages/angular-form/src/injectable.ts#L5)\n\n## Type Parameters\n"
+  }
+,
+  {
+    "path": "framework/angular/reference/index.md",
+    "filename": "index.md",
+    "size_bytes": 405,
+    "line_count": 18,
+    "preview": "---\nid: \"@tanstack/angular-form\"\ntitle: \"@tanstack/angular-form\"\n---\n\n# @tanstack/angular-form\n\n## Classes\n\n- [TanStackAppField](classes/TanStackAppField.md)\n"
+  }
+,
+  {
+    "path": "framework/angular/reference/functions/injectForm.md",
+    "filename": "injectForm.md",
+    "size_bytes": 1964,
+    "line_count": 72,
+    "preview": "---\nid: injectForm\ntitle: injectForm\n---\n\n# Function: injectForm()\n\n```ts\nfunction injectForm<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta>(opts?): FormApi<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta>;\n```\n"
+  }
+,
+  {
+    "path": "framework/angular/reference/functions/injectStore.md",
+    "filename": "injectStore.md",
+    "size_bytes": 1940,
+    "line_count": 80,
+    "preview": "---\nid: injectStore\ntitle: injectStore\n---\n\n# Function: injectStore()\n\n```ts\nfunction injectStore<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta, TSelected>(form, selector?): Signal<TSelected>;\n```\n"
+  }
+,
+  {
+    "path": "framework/angular/reference/functions/injectField.md",
+    "filename": "injectField.md",
+    "size_bytes": 375,
+    "line_count": 22,
+    "preview": "---\nid: injectField\ntitle: injectField\n---\n\n# Function: injectField()\n\n```ts\nfunction injectField<T>(): TanStackFieldInjectable<T>;\n```\n"
+  }
+,
+  {
+    "path": "framework/solid/quick-start.md",
+    "filename": "quick-start.md",
+    "size_bytes": 1234,
+    "line_count": 52,
+    "preview": "---\nid: quick-start\ntitle: Quick Start\n---\n\nThe bare minimum to get started with TanStack Form is to create a form and add a field. Keep in mind that this example does not include any validation or error handling... yet.\n\n```tsx\nimport { createForm } from '@tanstack/solid-form'\n\n"
+  }
+,
+  {
+    "path": "framework/solid/guides/linked-fields.md",
+    "filename": "linked-fields.md",
+    "size_bytes": 2297,
+    "line_count": 77,
+    "preview": "---\nid: linked-fields\ntitle: Link Two Form Fields Together\n---\n\nYou may find yourself needing to link two fields together; when one is validated as another field's value has changed.\nOne such usage is when you have both a `password` and `confirm_password` field,\nwhere you want to `confirm_password` to error out when `password`'s value does not match;\nregardless of which field triggered the value change.\n\n"
+  }
+,
+  {
+    "path": "framework/solid/guides/devtools.md",
+    "filename": "devtools.md",
+    "size_bytes": 1544,
+    "line_count": 60,
+    "preview": "---\nid: devtools\ntitle: Devtools\n---\n\nTanStack Form comes with a ready to go suit of devtools.\n\n## Setup\n\nInstall the [TanStack Devtools](https://tanstack.com/devtools/latest/docs/quick-start) library and the [TanStack Form plugin](http://npmjs.com/package/@tanstack/solid-form-devtools), from the framework adapter that your working in (in this case `@tanstack/solid-devtools`, and `@tanstack/solid-form-devtools`).\n"
+  }
+,
+  {
+    "path": "framework/solid/guides/submission-handling.md",
+    "filename": "submission-handling.md",
+    "size_bytes": 2631,
+    "line_count": 98,
+    "preview": "---\nid: submission-handling\ntitle: Submission handling\n---\n\n## Passing additional data to submission handling\n\nYou may have multiple types of submission behaviour, for example, going back to another page or staying on the form.\nYou can accomplish this by specifying the `onSubmitMeta` property. This meta data will be passed to the `onSubmit` function.\n\n"
+  }
+,
+  {
+    "path": "framework/solid/guides/validation.md",
+    "filename": "validation.md",
+    "size_bytes": 16674,
+    "line_count": 568,
+    "preview": "---\nid: form-validation\ntitle: Form and Field Validation\n---\n\nAt the core of TanStack Form's functionalities is the concept of validation. TanStack Form makes validation highly customizable:\n\n- You can control when to perform the validation (on change, on input, on blur, on submit...)\n- Validation rules can be defined at the field level or at the form level\n- Validation can be synchronous or asynchronous (for example, as a result of an API call)\n"
+  }
+,
+  {
+    "path": "framework/solid/guides/async-initial-values.md",
+    "filename": "async-initial-values.md",
+    "size_bytes": 1785,
+    "line_count": 52,
+    "preview": "---\nid: async-initial-values\ntitle: Async Initial Values\n---\n\nLet's say that you want to fetch some data from an API and use it as the initial value of a form.\n\nWhile this problem sounds simple on the surface, there are hidden complexities you might not have thought of thus far.\n\nFor example, you might want to show a loading spinner while the data is being fetched, or you might want to handle errors gracefully.\n"
+  }
+,
+  {
+    "path": "framework/solid/guides/arrays.md",
+    "filename": "arrays.md",
+    "size_bytes": 3193,
+    "line_count": 126,
+    "preview": "---\nid: arrays\ntitle: Arrays\n---\n\nTanStack Form supports arrays as values in a form, including sub-object values inside of an array.\n\n## Basic Usage\n\nTo use an array, you can use `field.state.value` on an array value in conjunction\n"
+  }
+,
+  {
+    "path": "framework/solid/guides/dynamic-validation.md",
+    "filename": "dynamic-validation.md",
+    "size_bytes": 5877,
+    "line_count": 224,
+    "preview": "---\nid: dynamic-validation\ntitle: Dynamic Validation\n---\n\nIn many cases, you want to change the validation rules based depending on the state of the form or other conditions. The most popular\nexample of this is when you want to validate a field differently based on whether the user has submitted the form for the first time or not.\n\nWe support this through our `onDynamic` validation function.\n\n"
+  }
+,
+  {
+    "path": "framework/solid/guides/basic-concepts.md",
+    "filename": "basic-concepts.md",
+    "size_bytes": 10067,
+    "line_count": 326,
+    "preview": "---\nid: basic-concepts\ntitle: Basic Concepts and Terminology\n---\n\nThis page introduces the basic concepts and terminology used in the `@tanstack/solid-form` library. Familiarizing yourself with these concepts will help you better understand and work with the library.\n\n## Form Options\n\nYou can create options for your form so that it can be shared between multiple forms by using the `formOptions` function.\n"
+  }
+,
+  {
+    "path": "framework/solid/guides/form-composition.md",
+    "filename": "form-composition.md",
+    "size_bytes": 16410,
+    "line_count": 610,
+    "preview": "---\nid: form-composition\ntitle: Form Composition\n---\n\nA common criticism of TanStack Form is its verbosity out-of-the-box. While this _can_ be useful for educational purposes - helping enforce understanding our APIs - it's not ideal in production use cases.\n\nAs a result, while `form.Field` enables the most powerful and flexible usage of TanStack Form, we provide APIs that wrap it and make your application code less verbose.\n\n## Custom Form Hooks\n"
+  }
+,
+  {
+    "path": "framework/solid/reference/type-aliases/CreateField.md",
+    "filename": "CreateField.md",
+    "size_bytes": 5153,
+    "line_count": 124,
+    "preview": "---\nid: CreateField\ntitle: CreateField\n---\n\n# Type Alias: CreateField()\\<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta\\>\n\n```ts\ntype CreateField<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta> = <TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync>(opts) => () => FieldApi<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta> & SolidFieldApi<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta>;\n```\n"
+  }
+,
+  {
+    "path": "framework/solid/reference/type-aliases/LensFieldComponent.md",
+    "filename": "LensFieldComponent.md",
+    "size_bytes": 2760,
+    "line_count": 91,
+    "preview": "---\nid: LensFieldComponent\ntitle: LensFieldComponent\n---\n\n# Type Alias: LensFieldComponent()\\<TLensData, TParentSubmitMeta, ExtendedApi\\>\n\n```ts\ntype LensFieldComponent<TLensData, TParentSubmitMeta, ExtendedApi> = <TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync>({\n  children,\n"
+  }
+,
+  {
+    "path": "framework/solid/reference/type-aliases/FieldComponent.md",
+    "filename": "FieldComponent.md",
+    "size_bytes": 3786,
+    "line_count": 131,
+    "preview": "---\nid: FieldComponent\ntitle: FieldComponent\n---\n\n# Type Alias: FieldComponent()\\<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TPatentSubmitMeta, ExtendedApi\\>\n\n```ts\ntype FieldComponent<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TPatentSubmitMeta, ExtendedApi> = <TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync>({\n  children,\n"
+  }
+,
+  {
+    "path": "framework/solid/reference/type-aliases/SolidFormExtendedApi.md",
+    "filename": "SolidFormExtendedApi.md",
+    "size_bytes": 2030,
+    "line_count": 64,
+    "preview": "---\nid: SolidFormExtendedApi\ntitle: SolidFormExtendedApi\n---\n\n# Type Alias: SolidFormExtendedApi\\<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta\\>\n\n```ts\ntype SolidFormExtendedApi<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta> = FormApi<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta> & SolidFormApi<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta>;\n```\n"
+  }
+,
+  {
+    "path": "framework/solid/reference/index.md",
+    "filename": "index.md",
+    "size_bytes": 943,
+    "line_count": 31,
+    "preview": "---\nid: \"@tanstack/solid-form\"\ntitle: \"@tanstack/solid-form\"\n---\n\n# @tanstack/solid-form\n\n## Interfaces\n\n- [CreateFieldOptions](interfaces/CreateFieldOptions.md)\n"
+  }
+,
+  {
+    "path": "framework/solid/reference/functions/createFieldGroup.md",
+    "filename": "createFieldGroup.md",
+    "size_bytes": 2451,
+    "line_count": 90,
+    "preview": "---\nid: createFieldGroup\ntitle: createFieldGroup\n---\n\n# Function: createFieldGroup()\n\n```ts\nfunction createFieldGroup<TFormData, TFieldGroupData, TFields, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TComponents, TFormComponents, TSubmitMeta>(opts): AppFieldExtendedSolidFieldGroupApi<TFormData, TFieldGroupData, TFields, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta, TComponents, TFormComponents>;\n```\n"
+  }
+,
+  {
+    "path": "framework/solid/reference/functions/createForm.md",
+    "filename": "createForm.md",
+    "size_bytes": 2745,
+    "line_count": 72,
+    "preview": "---\nid: createForm\ntitle: createForm\n---\n\n# Function: createForm()\n\n```ts\nfunction createForm<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TSubmitMeta>(opts?): FormApi<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TSubmitMeta> & SolidFormApi<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TSubmitMeta>;\n```\n"
+  }
+,
+  {
+    "path": "framework/solid/reference/functions/createField.md",
+    "filename": "createField.md",
+    "size_bytes": 5051,
+    "line_count": 122,
+    "preview": "---\nid: createField\ntitle: createField\n---\n\n# Function: createField()\n\n```ts\nfunction createField<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta>(opts): () => FieldApi<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta> & SolidFieldApi<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta>;\n```\n"
+  }
+,
+  {
+    "path": "framework/solid/reference/functions/createFormHook.md",
+    "filename": "createFormHook.md",
+    "size_bytes": 6630,
+    "line_count": 280,
+    "preview": "---\nid: createFormHook\ntitle: createFormHook\n---\n\n# Function: createFormHook()\n\n```ts\nfunction createFormHook<TComponents, TFormComponents>(opts): object;\n```\n"
+  }
+,
+  {
+    "path": "framework/solid/reference/functions/Field.md",
+    "filename": "Field.md",
+    "size_bytes": 3231,
+    "line_count": 116,
+    "preview": "---\nid: Field\ntitle: Field\n---\n\n# Function: Field()\n\n```ts\nfunction Field<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta>(props): Element;\n```\n"
+  }
+,
+  {
+    "path": "framework/solid/reference/functions/createFormHookContexts.md",
+    "filename": "createFormHookContexts.md",
+    "size_bytes": 1270,
+    "line_count": 54,
+    "preview": "---\nid: createFormHookContexts\ntitle: createFormHookContexts\n---\n\n# Function: createFormHookContexts()\n\n```ts\nfunction createFormHookContexts(): object;\n```\n"
+  }
+,
+  {
+    "path": "framework/solid/reference/functions/useStore.md",
+    "filename": "useStore.md",
+    "size_bytes": 1017,
+    "line_count": 70,
+    "preview": "---\nid: useStore\ntitle: useStore\n---\n\n# Function: useStore()\n\n## Call Signature\n\n```ts\n"
+  }
+,
+  {
+    "path": "framework/solid/reference/interfaces/CreateFieldOptions.md",
+    "filename": "CreateFieldOptions.md",
+    "size_bytes": 3492,
+    "line_count": 122,
+    "preview": "---\nid: CreateFieldOptions\ntitle: CreateFieldOptions\n---\n\n# Interface: CreateFieldOptions\\<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TSubmitMeta\\>\n\nDefined in: [packages/solid-form/src/types.ts:16](https://github.com/TanStack/form/blob/main/packages/solid-form/src/types.ts#L16)\n\n## Extends\n"
+  }
+,
+  {
+    "path": "framework/solid/reference/interfaces/SolidFormApi.md",
+    "filename": "SolidFormApi.md",
+    "size_bytes": 3612,
+    "line_count": 142,
+    "preview": "---\nid: SolidFormApi\ntitle: SolidFormApi\n---\n\n# Interface: SolidFormApi\\<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TSubmitMeta\\>\n\nDefined in: [packages/solid-form/src/createForm.tsx:14](https://github.com/TanStack/form/blob/main/packages/solid-form/src/createForm.tsx#L14)\n\n## Type Parameters\n"
+  }
+,
+  {
+    "path": "framework/solid/reference/interfaces/WithFieldGroupProps.md",
+    "filename": "WithFieldGroupProps.md",
+    "size_bytes": 1331,
+    "line_count": 64,
+    "preview": "---\nid: WithFieldGroupProps\ntitle: WithFieldGroupProps\n---\n\n# Interface: WithFieldGroupProps\\<TFieldGroupData, TFieldComponents, TFormComponents, TSubmitMeta, TRenderProps\\>\n\nDefined in: [packages/solid-form/src/createFormHook.tsx:262](https://github.com/TanStack/form/blob/main/packages/solid-form/src/createFormHook.tsx#L262)\n\n## Extends\n"
+  }
+,
+  {
+    "path": "framework/solid/reference/interfaces/WithFormProps.md",
+    "filename": "WithFormProps.md",
+    "size_bytes": 2488,
+    "line_count": 104,
+    "preview": "---\nid: WithFormProps\ntitle: WithFormProps\n---\n\n# Interface: WithFormProps\\<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta, TFieldComponents, TFormComponents, TRenderProps\\>\n\nDefined in: [packages/solid-form/src/createFormHook.tsx:206](https://github.com/TanStack/form/blob/main/packages/solid-form/src/createFormHook.tsx#L206)\n\n## Extends\n"
+  }
+,
+  {
+    "path": "framework/solid/reference/interfaces/CreateFieldOptionsBound.md",
+    "filename": "CreateFieldOptionsBound.md",
+    "size_bytes": 2061,
+    "line_count": 78,
+    "preview": "---\nid: CreateFieldOptionsBound\ntitle: CreateFieldOptionsBound\n---\n\n# Interface: CreateFieldOptionsBound\\<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync\\>\n\nDefined in: [packages/solid-form/src/types.ts:77](https://github.com/TanStack/form/blob/main/packages/solid-form/src/types.ts#L77)\n\n## Extends\n"
+  }
+,
+  {
+    "path": "framework/react/quick-start.md",
+    "filename": "quick-start.md",
+    "size_bytes": 4236,
+    "line_count": 136,
+    "preview": "---\nid: quick-start\ntitle: Quick Start\n---\n\nTanStack Form is unlike most form libraries you've used before. It's designed for large-scale production usage, with a focus on type safety, performance and composition for an unmatched developer experience.\n\nAs a result, we've developed [a philosophy around the library's usage](../../philosophy.md) that values scalability and long-term developer experience over short and sharable code snippets.\n\nHere's an example of a form following many of our best practices, which will allow you to rapidly develop even high-complexity forms after a short onboarding experience:\n"
+  }
+,
+  {
+    "path": "framework/react/guides/react-native.md",
+    "filename": "react-native.md",
+    "size_bytes": 608,
+    "line_count": 28,
+    "preview": "---\nid: react-native\ntitle: Usage with React Native\n---\n\nTanStack Form is headless and it should support React Native out-of-the-box without needing any additional configuration.\n\nHere is an example:\n\n```tsx\n"
+  }
+,
+  {
+    "path": "framework/react/guides/focus-management.md",
+    "filename": "focus-management.md",
+    "size_bytes": 3749,
+    "line_count": 142,
+    "preview": "---\nid: focus-management\ntitle: Focus Management\n---\n\nIn some instances, you may want to focus the first input with an error.\n\n[Because TanStack Form intentionally does not have insights into your markup](../../../philosophy.md), we cannot add a built-in focus management feature.\n\nHowever, you can easily add this feature into your application without this hypothetical built-in feature.\n"
+  }
+,
+  {
+    "path": "framework/react/guides/linked-fields.md",
+    "filename": "linked-fields.md",
+    "size_bytes": 2298,
+    "line_count": 75,
+    "preview": "---\nid: linked-fields\ntitle: Link Two Form Fields Together\n---\n\nYou may find yourself needing to link two fields together, such that one is validated when another's value has changed.\nOne such use case is when you have both a `password` and a `confirm_password` field.\nHere, you want the `confirm_password` field to error out if its value doesn't match that of the `password` field, regardless of which field triggered the value change.\n\nImagine the following user flow:\n"
+  }
+,
+  {
+    "path": "framework/react/guides/devtools.md",
+    "filename": "devtools.md",
+    "size_bytes": 1571,
+    "line_count": 52,
+    "preview": "---\nid: devtools\ntitle: Devtools\n---\n\nTanStack Form comes with a ready-to-go suite of devtools.\n\n## Setup\n\nInstall the [TanStack Devtools](https://tanstack.com/devtools/latest/docs/quick-start) library and the [TanStack Form plugin](http://npmjs.com/package/@tanstack/react-form-devtools), from the framework adapter that you're working in (in this case `@tanstack/react-devtools` and `@tanstack/react-form-devtools`).\n"
+  }
+,
+  {
+    "path": "framework/react/guides/submission-handling.md",
+    "filename": "submission-handling.md",
+    "size_bytes": 2513,
+    "line_count": 93,
+    "preview": "---\nid: submission-handling\ntitle: Submission handling\n---\n\n## Passing additional data to submission handling\n\nYou may have multiple types of submission behaviour, for example, going back to the previous page or staying on the form.\nYou can accomplish this by specifying the `onSubmitMeta` property. This meta data will be passed to the `onSubmit` function.\n\n"
+  }
+,
+  {
+    "path": "framework/react/guides/validation.md",
+    "filename": "validation.md",
+    "size_bytes": 16534,
+    "line_count": 563,
+    "preview": "---\nid: form-validation\ntitle: Form and Field Validation\n---\n\nAt the core of TanStack Form's functionality is the concept of validation. TanStack Form makes validation highly customizable:\n\n- You can control when to perform the validation (on change, on input, on blur, on submit, etc.)\n- Validation rules can be defined at the field-level or at the form-level\n- Validation can be synchronous or asynchronous (for example, as a result of an API call)\n"
+  }
+,
+  {
+    "path": "framework/react/guides/reactivity.md",
+    "filename": "reactivity.md",
+    "size_bytes": 2340,
+    "line_count": 52,
+    "preview": "---\nid: reactivity\ntitle: Reactivity\n---\n\nTanstack Form doesn't cause re-renders when interacting with the form. So, you might find yourself trying to use a form or field state value without success.\n\nIf you would like to access reactive values, you will need to subscribe to them using one of two methods: `useStore` or the `form.Subscribe` component.\n\nSome uses for these subscriptions are rendering up-to-date field values, determining what to render based on a condition, or using field values inside the logic of your component.\n"
+  }
+,
+  {
+    "path": "framework/react/guides/async-initial-values.md",
+    "filename": "async-initial-values.md",
+    "size_bytes": 1689,
+    "line_count": 51,
+    "preview": "---\nid: async-initial-values\ntitle: Async Initial Values\n---\n\nLet's say that you want to fetch some data from an API and use it as the initial value of a form.\n\nWhile this problem sounds simple on the surface, there are hidden complexities you might not have thought of thus far.\n\nFor example, you might want to show a loading spinner while the data is being fetched, or you might want to handle errors gracefully.\n"
+  }
+,
+  {
+    "path": "framework/react/guides/listeners.md",
+    "filename": "listeners.md",
+    "size_bytes": 3358,
+    "line_count": 126,
+    "preview": "---\nid: listeners\ntitle: Side effects for event triggers\n---\n\nFor situations where you want to \"affect\" or \"react\" to triggers, there's the listener API. For example, if you, as the developer, want to reset a form field as a result of another field changing, you would use the listener API.\n\nImagine the following user flow:\n\n- User selects a country from a drop-down.\n"
+  }
+,
+  {
+    "path": "framework/react/guides/arrays.md",
+    "filename": "arrays.md",
+    "size_bytes": 2884,
+    "line_count": 124,
+    "preview": "---\nid: arrays\ntitle: Arrays\n---\n\nTanStack Form supports arrays as values in a form, including sub-object values inside of an array.\n\n## Basic Usage\n\nTo use an array, you can use `field.state.value` on an array value:\n"
+  }
+,
+  {
+    "path": "framework/react/guides/custom-errors.md",
+    "filename": "custom-errors.md",
+    "size_bytes": 6824,
+    "line_count": 277,
+    "preview": "---\nid: custom-errors\ntitle: Custom Errors\n---\n\nTanStack Form provides complete flexibility in the types of error values you can return from validators. String errors are the most common and easy to work with, but the library allows you to return any type of value from your validators.\n\nAs a general rule, any truthy value is considered an error and will mark the form or field as invalid, while falsy values (`false`, `undefined`, `null`, etc.) mean there is no error, and the form or field is valid.\n\n## Return String Values from Forms\n"
+  }
+,
+  {
+    "path": "framework/react/guides/ssr.md",
+    "filename": "ssr.md",
+    "size_bytes": 14725,
+    "line_count": 491,
+    "preview": "---\nid: ssr\ntitle: React Meta-Framework Usage\n---\n\nTanStack Form is compatible with React out of the box, supporting `SSR` and being framework-agnostic. However, specific configurations are necessary, according to your chosen framework.\n\nToday we support the following meta-frameworks:\n\n- [TanStack Start](https://tanstack.com/start/)\n"
+  }
+,
+  {
+    "path": "framework/react/guides/ui-libraries.md",
+    "filename": "ui-libraries.md",
+    "size_bytes": 8048,
+    "line_count": 216,
+    "preview": "---\nid: ui-libraries\ntitle: UI Libraries\n---\n\n## Usage of TanStack Form with UI Libraries\n\nTanStack Form is a headless library, offering you complete flexibility to style it as you see fit. It's compatible with a wide range of UI libraries, including `Chakra UI`, `Tailwind`, `Material UI`, `Mantine`, `shadcn/ui`, or even plain CSS.\n\nThis guide focuses on `Chakra UI`, `Material UI`, `Mantine`, and `shadcn/ui`, but the concepts are applicable to any UI library of your choice.\n"
+  }
+,
+  {
+    "path": "framework/react/guides/dynamic-validation.md",
+    "filename": "dynamic-validation.md",
+    "size_bytes": 5804,
+    "line_count": 225,
+    "preview": "---\nid: dynamic-validation\ntitle: Dynamic Validation\n---\n\nIn many cases, you want to change the validation rules depending on the state of the form or other conditions. The most popular\nexample of this is when you want to validate a field differently based on whether the user has submitted the form for the first time or not.\n\nWe support this through our `onDynamic` validation function.\n\n"
+  }
+,
+  {
+    "path": "framework/react/guides/debugging.md",
+    "filename": "debugging.md",
+    "size_bytes": 2136,
+    "line_count": 43,
+    "preview": "---\nid: debugging\ntitle: Debugging React Usage\n---\n\nHere's a list of common errors you might see in the console and how to fix them.\n\n## Changing an uncontrolled input to be controlled\n\nIf you see this error in the console:\n"
+  }
+,
+  {
+    "path": "framework/react/guides/basic-concepts.md",
+    "filename": "basic-concepts.md",
+    "size_bytes": 11955,
+    "line_count": 402,
+    "preview": "---\nid: basic-concepts\ntitle: Basic Concepts and Terminology\n---\n\nThis page introduces the basic concepts and terminology used in the `@tanstack/react-form` library. Familiarizing yourself with these concepts will help you better understand and work with the library.\n\n## Form Options\n\nYou can customize your form by creating configuration options with the `formOptions` function. These options can be shared between multiple forms.\n"
+  }
+,
+  {
+    "path": "framework/react/guides/form-composition.md",
+    "filename": "form-composition.md",
+    "size_bytes": 17455,
+    "line_count": 637,
+    "preview": "---\nid: form-composition\ntitle: Form Composition\n---\n\nA common criticism of TanStack Form is that it is verbose out-of-the-box. While this verbosity _can_ be useful for educational purposes - helping to enforce understanding of our APIs - it's not ideal in production use cases.\n\nAs a result, while `form.Field` enables the most powerful and flexible usage of TanStack Form, we provide APIs that wrap it and make your application code less verbose.\n\n## Custom Form Hooks\n"
+  }
+,
+  {
+    "path": "framework/react/reference/type-aliases/ReactFormExtendedApi.md",
+    "filename": "ReactFormExtendedApi.md",
+    "size_bytes": 2022,
+    "line_count": 64,
+    "preview": "---\nid: ReactFormExtendedApi\ntitle: ReactFormExtendedApi\n---\n\n# Type Alias: ReactFormExtendedApi\\<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta\\>\n\n```ts\ntype ReactFormExtendedApi<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta> = FormApi<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta> & ReactFormApi<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta>;\n```\n"
+  }
+,
+  {
+    "path": "framework/react/reference/type-aliases/ServerFormState.md",
+    "filename": "ServerFormState.md",
+    "size_bytes": 608,
+    "line_count": 22,
+    "preview": "---\nid: ServerFormState\ntitle: ServerFormState\n---\n\n# Type Alias: ServerFormState\\<TFormData, TOnServer\\>\n\n```ts\ntype ServerFormState<TFormData, TOnServer> = Pick<FormState<TFormData, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, TOnServer>, \"values\" | \"errors\" | \"errorMap\">;\n```\n"
+  }
+,
+  {
+    "path": "framework/react/reference/type-aliases/LensFieldComponent.md",
+    "filename": "LensFieldComponent.md",
+    "size_bytes": 2794,
+    "line_count": 91,
+    "preview": "---\nid: LensFieldComponent\ntitle: LensFieldComponent\n---\n\n# Type Alias: LensFieldComponent()\\<TLensData, TParentSubmitMeta, ExtendedApi\\>\n\n```ts\ntype LensFieldComponent<TLensData, TParentSubmitMeta, ExtendedApi> = <TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync>({\n  children,\n"
+  }
+,
+  {
+    "path": "framework/react/reference/type-aliases/FieldComponent.md",
+    "filename": "FieldComponent.md",
+    "size_bytes": 3820,
+    "line_count": 131,
+    "preview": "---\nid: FieldComponent\ntitle: FieldComponent\n---\n\n# Type Alias: FieldComponent()\\<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TPatentSubmitMeta, ExtendedApi\\>\n\n```ts\ntype FieldComponent<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TPatentSubmitMeta, ExtendedApi> = <TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync>({\n  children,\n"
+  }
+,
+  {
+    "path": "framework/react/reference/type-aliases/UseField.md",
+    "filename": "UseField.md",
+    "size_bytes": 4296,
+    "line_count": 122,
+    "preview": "---\nid: UseField\ntitle: UseField\n---\n\n# Type Alias: UseField()\\<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TPatentSubmitMeta\\>\n\n```ts\ntype UseField<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TPatentSubmitMeta> = <TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync>(opts) => FieldApi<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TPatentSubmitMeta>;\n```\n"
+  }
+,
+  {
+    "path": "framework/react/reference/index.md",
+    "filename": "index.md",
+    "size_bytes": 975,
+    "line_count": 35,
+    "preview": "---\nid: \"@tanstack/react-form\"\ntitle: \"@tanstack/react-form\"\n---\n\n# @tanstack/react-form\n\n## Interfaces\n\n- [ReactFormApi](interfaces/ReactFormApi.md)\n"
+  }
+,
+  {
+    "path": "framework/react/reference/variables/Field.md",
+    "filename": "Field.md",
+    "size_bytes": 3506,
+    "line_count": 120,
+    "preview": "---\nid: Field\ntitle: Field\n---\n\n# Variable: Field()\n\n```ts\nconst Field: <TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TPatentSubmitMeta>(__namedParameters) => ReactNode | Promise<ReactNode>;\n```\n"
+  }
+,
+  {
+    "path": "framework/react/reference/functions/useForm.md",
+    "filename": "useForm.md",
+    "size_bytes": 2284,
+    "line_count": 76,
+    "preview": "---\nid: useForm\ntitle: useForm\n---\n\n# Function: useForm()\n\n```ts\nfunction useForm<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta>(opts?): ReactFormExtendedApi<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta>;\n```\n"
+  }
+,
+  {
+    "path": "framework/react/reference/functions/createFormHook.md",
+    "filename": "createFormHook.md",
+    "size_bytes": 6693,
+    "line_count": 268,
+    "preview": "---\nid: createFormHook\ntitle: createFormHook\n---\n\n# Function: createFormHook()\n\n```ts\nfunction createFormHook<TComponents, TFormComponents>(__namedParameters): object;\n```\n"
+  }
+,
+  {
+    "path": "framework/react/reference/functions/useFieldGroup.md",
+    "filename": "useFieldGroup.md",
+    "size_bytes": 3061,
+    "line_count": 109,
+    "preview": "---\nid: useFieldGroup\ntitle: useFieldGroup\n---\n\n# Function: useFieldGroup()\n\n```ts\nfunction useFieldGroup<TFormData, TFieldGroupData, TFields, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TComponents, TFormComponents, TSubmitMeta>(opts): AppFieldExtendedReactFieldGroupApi<TFormData, TFieldGroupData, TFields, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta, TComponents, TFormComponents>;\n```\n"
+  }
+,
+  {
+    "path": "framework/react/reference/functions/createFormHookContexts.md",
+    "filename": "createFormHookContexts.md",
+    "size_bytes": 1236,
+    "line_count": 54,
+    "preview": "---\nid: createFormHookContexts\ntitle: createFormHookContexts\n---\n\n# Function: createFormHookContexts()\n\n```ts\nfunction createFormHookContexts(): object;\n```\n"
+  }
+,
+  {
+    "path": "framework/react/reference/functions/useField.md",
+    "filename": "useField.md",
+    "size_bytes": 4554,
+    "line_count": 122,
+    "preview": "---\nid: useField\ntitle: useField\n---\n\n# Function: useField()\n\n```ts\nfunction useField<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TPatentSubmitMeta>(opts): FieldApi<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TPatentSubmitMeta> & ReactFieldApi<TParentData, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TPatentSubmitMeta>;\n```\n"
+  }
+,
+  {
+    "path": "framework/react/reference/functions/useStore.md",
+    "filename": "useStore.md",
+    "size_bytes": 1177,
+    "line_count": 84,
+    "preview": "---\nid: useStore\ntitle: useStore\n---\n\n# Function: useStore()\n\n## Call Signature\n\n```ts\n"
+  }
+,
+  {
+    "path": "framework/react/reference/interfaces/WithFieldGroupProps.md",
+    "filename": "WithFieldGroupProps.md",
+    "size_bytes": 1252,
+    "line_count": 54,
+    "preview": "---\nid: WithFieldGroupProps\ntitle: WithFieldGroupProps\n---\n\n# Interface: WithFieldGroupProps\\<TFieldGroupData, TFieldComponents, TFormComponents, TSubmitMeta, TRenderProps\\>\n\nDefined in: [packages/react-form/src/createFormHook.tsx:256](https://github.com/TanStack/form/blob/main/packages/react-form/src/createFormHook.tsx#L256)\n\n## Extends\n"
+  }
+,
+  {
+    "path": "framework/react/reference/interfaces/WithFormProps.md",
+    "filename": "WithFormProps.md",
+    "size_bytes": 2409,
+    "line_count": 94,
+    "preview": "---\nid: WithFormProps\ntitle: WithFormProps\n---\n\n# Interface: WithFormProps\\<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta, TFieldComponents, TFormComponents, TRenderProps\\>\n\nDefined in: [packages/react-form/src/createFormHook.tsx:200](https://github.com/TanStack/form/blob/main/packages/react-form/src/createFormHook.tsx#L200)\n\n## Extends\n"
+  }
+,
+  {
+    "path": "framework/react/reference/interfaces/UseFieldOptions.md",
+    "filename": "UseFieldOptions.md",
+    "size_bytes": 3503,
+    "line_count": 124,
+    "preview": "---\nid: UseFieldOptions\ntitle: UseFieldOptions\n---\n\n# Interface: UseFieldOptions\\<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TSubmitMeta\\>\n\nDefined in: [packages/react-form/src/types.ts:20](https://github.com/TanStack/form/blob/main/packages/react-form/src/types.ts#L20)\n\nThe field options.\n"
+  }
+,
+  {
+    "path": "framework/react/reference/interfaces/UseFieldOptionsBound.md",
+    "filename": "UseFieldOptionsBound.md",
+    "size_bytes": 2052,
+    "line_count": 78,
+    "preview": "---\nid: UseFieldOptionsBound\ntitle: UseFieldOptionsBound\n---\n\n# Interface: UseFieldOptionsBound\\<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync\\>\n\nDefined in: [packages/react-form/src/types.ts:81](https://github.com/TanStack/form/blob/main/packages/react-form/src/types.ts#L81)\n\n## Extends\n"
+  }
+,
+  {
+    "path": "framework/react/reference/interfaces/ReactFormApi.md",
+    "filename": "ReactFormApi.md",
+    "size_bytes": 2785,
+    "line_count": 106,
+    "preview": "---\nid: ReactFormApi\ntitle: ReactFormApi\n---\n\n# Interface: ReactFormApi\\<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta\\>\n\nDefined in: [packages/react-form/src/useForm.tsx:24](https://github.com/TanStack/form/blob/main/packages/react-form/src/useForm.tsx#L24)\n\nFields that are added onto the `FormAPI` from `@tanstack/form-core` and returned from `useForm`\n"
+  }
+,
+  {
+    "path": "philosophy.md",
+    "filename": "philosophy.md",
+    "size_bytes": 3560,
+    "line_count": 78,
+    "preview": "---\nid: philosophy\ntitle: Philosophy\n---\n\nEvery well-established project should have a philosophy that guides its development. Without a core philosophy, development can languish in endless decision-making and have weaker APIs as a result.\n\nThis document outlines the core principles that drive the development and feature-set of TanStack Form.\n\n## Upgrading unified APIs\n"
+  }
+,
+  {
+    "path": "installation.md",
+    "filename": "installation.md",
+    "size_bytes": 1747,
+    "line_count": 67,
+    "preview": "---\nid: installation\ntitle: Installation\n---\n\nTanStack Form is compatible with various front-end frameworks, including React, Vue, and Solid. Install the corresponding adapter for your framework using your preferred package manager:\n\n<!-- ::start:tabs variant=\"package-managers\" -->\n\nreact: @tanstack/react-form\n"
+  }
+,
+  {
+    "path": "typescript.md",
+    "filename": "typescript.md",
+    "size_bytes": 875,
+    "line_count": 14,
+    "preview": "---\nid: typescript\ntitle: TypeScript\n---\n\nTanStack Form is written 100% in **TypeScript** with the highest quality generics, constraints, and interfaces to make sure the library and your projects are as type-safe as possible!\n\nThings to keep in mind:\n\n- `strict: true` is required in your `tsconfig.json` to get the most out of TanStack Form's types\n"
+  }
+,
+  {
+    "path": "reference/classes/FieldApi.md",
+    "filename": "FieldApi.md",
+    "size_bytes": 18394,
+    "line_count": 719,
+    "preview": "---\nid: FieldApi\ntitle: FieldApi\n---\n\n# Class: FieldApi\\<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta\\>\n\nDefined in: [packages/form-core/src/FieldApi.ts:979](https://github.com/TanStack/form/blob/main/packages/form-core/src/FieldApi.ts#L979)\n\nA class representing the API for managing a form field.\n"
+  }
+,
+  {
+    "path": "reference/classes/FormApi.md",
+    "filename": "FormApi.md",
+    "size_bytes": 22691,
+    "line_count": 1171,
+    "preview": "---\nid: FormApi\ntitle: FormApi\n---\n\n# Class: FormApi\\<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta\\>\n\nDefined in: [packages/form-core/src/FormApi.ts:888](https://github.com/TanStack/form/blob/main/packages/form-core/src/FormApi.ts#L888)\n\nA class representing the Form API. It handles the logic and interactions with the form state.\n"
+  }
+,
+  {
+    "path": "reference/classes/FieldGroupApi.md",
+    "filename": "FieldGroupApi.md",
+    "size_bytes": 14976,
+    "line_count": 864,
+    "preview": "---\nid: FieldGroupApi\ntitle: FieldGroupApi\n---\n\n# Class: FieldGroupApi\\<TFormData, TFieldGroupData, TFields, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta\\>\n\nDefined in: [packages/form-core/src/FieldGroupApi.ts:112](https://github.com/TanStack/form/blob/main/packages/form-core/src/FieldGroupApi.ts#L112)\n\n## Type Parameters\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/StandardSchemaV1.md",
+    "filename": "StandardSchemaV1.md",
+    "size_bytes": 744,
+    "line_count": 36,
+    "preview": "---\nid: StandardSchemaV1\ntitle: StandardSchemaV1\n---\n\n# Type Alias: StandardSchemaV1\\<Input, Output\\>\n\n```ts\ntype StandardSchemaV1<Input, Output> = object;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/EventClientEventNames.md",
+    "filename": "EventClientEventNames.md",
+    "size_bytes": 322,
+    "line_count": 12,
+    "preview": "---\nid: EventClientEventNames\ntitle: EventClientEventNames\n---\n\n# Type Alias: EventClientEventNames\n\n```ts\ntype EventClientEventNames = ExtractEventNames<EventClientEventMap>;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/DeepKeyAndValueObject.md",
+    "filename": "DeepKeyAndValueObject.md",
+    "size_bytes": 792,
+    "line_count": 32,
+    "preview": "---\nid: DeepKeyAndValueObject\ntitle: DeepKeyAndValueObject\n---\n\n# Type Alias: DeepKeyAndValueObject\\<TParent, T, TAcc, TAllKeys\\>\n\n```ts\ntype DeepKeyAndValueObject<TParent, T, TAcc, TAllKeys> = TAllKeys extends any ? DeepKeysAndValuesImpl<NonNullable<T[TAllKeys]>, ObjectDeepKeyAndValue<TParent, T, TAllKeys>, \n  | TAcc\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/AllTupleKeys.md",
+    "filename": "AllTupleKeys.md",
+    "size_bytes": 331,
+    "line_count": 18,
+    "preview": "---\nid: AllTupleKeys\ntitle: AllTupleKeys\n---\n\n# Type Alias: AllTupleKeys\\<T\\>\n\n```ts\ntype AllTupleKeys<T> = T extends any ? keyof T & `${number}` : never;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/ObjectAccessor.md",
+    "filename": "ObjectAccessor.md",
+    "size_bytes": 519,
+    "line_count": 22,
+    "preview": "---\nid: ObjectAccessor\ntitle: ObjectAccessor\n---\n\n# Type Alias: ObjectAccessor\\<TParent, TKey\\>\n\n```ts\ntype ObjectAccessor<TParent, TKey> = TParent[\"key\"] extends never ? `${TKey}` : `${TParent[\"key\"]}.${TKey}`;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/EventClientEventMap.md",
+    "filename": "EventClientEventMap.md",
+    "size_bytes": 290,
+    "line_count": 12,
+    "preview": "---\nid: EventClientEventMap\ntitle: EventClientEventMap\n---\n\n# Type Alias: EventClientEventMap\n\n```ts\ntype EventClientEventMap = keyof EventMap;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/FormValidationError.md",
+    "filename": "FormValidationError.md",
+    "size_bytes": 397,
+    "line_count": 20,
+    "preview": "---\nid: FormValidationError\ntitle: FormValidationError\n---\n\n# Type Alias: FormValidationError\\<TFormData\\>\n\n```ts\ntype FormValidationError<TFormData> = \n  | ValidationError\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/FormValidator.md",
+    "filename": "FormValidator.md",
+    "size_bytes": 1029,
+    "line_count": 78,
+    "preview": "---\nid: FormValidator\ntitle: FormValidator\n---\n\n# Type Alias: FormValidator\\<TFormData, TType, TFn\\>\n\n```ts\ntype FormValidator<TFormData, TType, TFn> = object;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/FieldMeta.md",
+    "filename": "FieldMeta.md",
+    "size_bytes": 3672,
+    "line_count": 100,
+    "preview": "---\nid: FieldMeta\ntitle: FieldMeta\n---\n\n# Type Alias: FieldMeta\\<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync\\>\n\n```ts\ntype FieldMeta<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync> = FieldMetaBase<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync> & FieldMetaDerived<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync>;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/FieldState.md",
+    "filename": "FieldState.md",
+    "size_bytes": 3781,
+    "line_count": 124,
+    "preview": "---\nid: FieldState\ntitle: FieldState\n---\n\n# Type Alias: FieldState\\<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync\\>\n\n```ts\ntype FieldState<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync> = object;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/AnyFormState.md",
+    "filename": "AnyFormState.md",
+    "size_bytes": 306,
+    "line_count": 12,
+    "preview": "---\nid: AnyFormState\ntitle: AnyFormState\n---\n\n# Type Alias: AnyFormState\n\n```ts\ntype AnyFormState = FormState<any, any, any, any, any, any, any, any, any, any, any>;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/DeepValue.md",
+    "filename": "DeepValue.md",
+    "size_bytes": 528,
+    "line_count": 24,
+    "preview": "---\nid: DeepValue\ntitle: DeepValue\n---\n\n# Type Alias: DeepValue\\<TValue, TAccessor\\>\n\n```ts\ntype DeepValue<TValue, TAccessor> = unknown extends TValue ? TValue : TAccessor extends DeepKeys<TValue> ? DeepRecord<TValue>[TAccessor] : never;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/DerivedFormState.md",
+    "filename": "DerivedFormState.md",
+    "size_bytes": 5666,
+    "line_count": 228,
+    "preview": "---\nid: DerivedFormState\ntitle: DerivedFormState\n---\n\n# Type Alias: DerivedFormState\\<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer\\>\n\n```ts\ntype DerivedFormState<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer> = object;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/ArrayAccessor.md",
+    "filename": "ArrayAccessor.md",
+    "size_bytes": 450,
+    "line_count": 18,
+    "preview": "---\nid: ArrayAccessor\ntitle: ArrayAccessor\n---\n\n# Type Alias: ArrayAccessor\\<TParent\\>\n\n```ts\ntype ArrayAccessor<TParent> = `${TParent[\"key\"] extends never ? \"\" : TParent[\"key\"]}[${number}]`;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/AnyFieldMetaBase.md",
+    "filename": "AnyFieldMetaBase.md",
+    "size_bytes": 378,
+    "line_count": 12,
+    "preview": "---\nid: AnyFieldMetaBase\ntitle: AnyFieldMetaBase\n---\n\n# Type Alias: AnyFieldMetaBase\n\n```ts\ntype AnyFieldMetaBase = FieldMetaBase<any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any>;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/UnwrapFormAsyncValidateOrFn.md",
+    "filename": "UnwrapFormAsyncValidateOrFn.md",
+    "size_bytes": 668,
+    "line_count": 18,
+    "preview": "---\nid: UnwrapFormAsyncValidateOrFn\ntitle: UnwrapFormAsyncValidateOrFn\n---\n\n# Type Alias: UnwrapFormAsyncValidateOrFn\\<TValidateOrFn\\>\n\n```ts\ntype UnwrapFormAsyncValidateOrFn<TValidateOrFn> = [TValidateOrFn] extends [FormValidateAsyncFn<any>] ? ExtractGlobalFormError<Awaited<ReturnType<TValidateOrFn>>> : [TValidateOrFn] extends [StandardSchemaV1<any, any>] ? Record<string, StandardSchemaV1Issue[]> : undefined;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/ValidationLogicFn.md",
+    "filename": "ValidationLogicFn.md",
+    "size_bytes": 404,
+    "line_count": 22,
+    "preview": "---\nid: ValidationLogicFn\ntitle: ValidationLogicFn\n---\n\n# Type Alias: ValidationLogicFn()\n\n```ts\ntype ValidationLogicFn = (props) => void;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/FieldInfo.md",
+    "filename": "FieldInfo.md",
+    "size_bytes": 1056,
+    "line_count": 46,
+    "preview": "---\nid: FieldInfo\ntitle: FieldInfo\n---\n\n# Type Alias: FieldInfo\\<TFormData\\>\n\n```ts\ntype FieldInfo<TFormData> = object;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/UnwrapFieldAsyncValidateOrFn.md",
+    "filename": "UnwrapFieldAsyncValidateOrFn.md",
+    "size_bytes": 1387,
+    "line_count": 29,
+    "preview": "---\nid: UnwrapFieldAsyncValidateOrFn\ntitle: UnwrapFieldAsyncValidateOrFn\n---\n\n# Type Alias: UnwrapFieldAsyncValidateOrFn\\<TName, TValidateOrFn, TFormValidateOrFn\\>\n\n```ts\ntype UnwrapFieldAsyncValidateOrFn<TName, TValidateOrFn, TFormValidateOrFn> = \n  | [TFormValidateOrFn] extends [StandardSchemaV1<any, infer TStandardOut>] ? TName extends keyof TStandardOut ? StandardSchemaV1Issue[] : undefined : undefined\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/ObjectValue.md",
+    "filename": "ObjectValue.md",
+    "size_bytes": 513,
+    "line_count": 26,
+    "preview": "---\nid: ObjectValue\ntitle: ObjectValue\n---\n\n# Type Alias: ObjectValue\\<TParent, T, TKey\\>\n\n```ts\ntype ObjectValue<TParent, T, TKey> = T[TKey] | Nullable<TParent[\"value\"]>;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/ValidationSource.md",
+    "filename": "ValidationSource.md",
+    "size_bytes": 266,
+    "line_count": 12,
+    "preview": "---\nid: ValidationSource\ntitle: ValidationSource\n---\n\n# Type Alias: ValidationSource\n\n```ts\ntype ValidationSource = \"form\" | \"field\";\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/FieldsMap.md",
+    "filename": "FieldsMap.md",
+    "size_bytes": 707,
+    "line_count": 25,
+    "preview": "---\nid: FieldsMap\ntitle: FieldsMap\n---\n\n# Type Alias: FieldsMap\\<TFormData, TFieldGroupData\\>\n\n```ts\ntype FieldsMap<TFormData, TFieldGroupData> = TFieldGroupData extends any[] ? never : string extends keyof TFieldGroupData ? never : { [K in keyof TFieldGroupData]: DeepKeysOfType<TFormData, TFieldGroupData[K]> };\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/AnyFieldGroupApi.md",
+    "filename": "AnyFieldGroupApi.md",
+    "size_bytes": 351,
+    "line_count": 12,
+    "preview": "---\nid: AnyFieldGroupApi\ntitle: AnyFieldGroupApi\n---\n\n# Type Alias: AnyFieldGroupApi\n\n```ts\ntype AnyFieldGroupApi = FieldGroupApi<any, any, any, any, any, any, any, any, any, any, any, any, any, any>;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/DeepKeyAndValueTuple.md",
+    "filename": "DeepKeyAndValueTuple.md",
+    "size_bytes": 815,
+    "line_count": 32,
+    "preview": "---\nid: DeepKeyAndValueTuple\ntitle: DeepKeyAndValueTuple\n---\n\n# Type Alias: DeepKeyAndValueTuple\\<TParent, T, TAcc, TAllKeys\\>\n\n```ts\ntype DeepKeyAndValueTuple<TParent, T, TAcc, TAllKeys> = TAllKeys extends any ? DeepKeysAndValuesImpl<NonNullable<T[TAllKeys]>, TupleDeepKeyAndValue<TParent, T, TAllKeys>, \n  | TAcc\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/TStandardSchemaValidatorValue.md",
+    "filename": "TStandardSchemaValidatorValue.md",
+    "size_bytes": 982,
+    "line_count": 42,
+    "preview": "---\nid: TStandardSchemaValidatorValue\ntitle: TStandardSchemaValidatorValue\n---\n\n# Type Alias: TStandardSchemaValidatorValue\\<TData, TSource\\>\n\n```ts\ntype TStandardSchemaValidatorValue<TData, TSource> = object;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/BroadcastFormId.md",
+    "filename": "BroadcastFormId.md",
+    "size_bytes": 454,
+    "line_count": 22,
+    "preview": "---\nid: BroadcastFormId\ntitle: BroadcastFormId\n---\n\n# Type Alias: BroadcastFormId\n\n```ts\ntype BroadcastFormId = object;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/BroadcastFormState.md",
+    "filename": "BroadcastFormState.md",
+    "size_bytes": 654,
+    "line_count": 32,
+    "preview": "---\nid: BroadcastFormState\ntitle: BroadcastFormState\n---\n\n# Type Alias: BroadcastFormState\n\n```ts\ntype BroadcastFormState = object;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/TStandardSchemaValidatorIssue.md",
+    "filename": "TStandardSchemaValidatorIssue.md",
+    "size_bytes": 591,
+    "line_count": 18,
+    "preview": "---\nid: TStandardSchemaValidatorIssue\ntitle: TStandardSchemaValidatorIssue\n---\n\n# Type Alias: TStandardSchemaValidatorIssue\\<TSource\\>\n\n```ts\ntype TStandardSchemaValidatorIssue<TSource> = TSource extends \"form\" ? object : TSource extends \"field\" ? StandardSchemaV1Issue[] : never;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/AnyFormOptions.md",
+    "filename": "AnyFormOptions.md",
+    "size_bytes": 321,
+    "line_count": 12,
+    "preview": "---\nid: AnyFormOptions\ntitle: AnyFormOptions\n---\n\n# Type Alias: AnyFormOptions\n\n```ts\ntype AnyFormOptions = FormOptions<any, any, any, any, any, any, any, any, any, any, any, any>;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/AllObjectKeys.md",
+    "filename": "AllObjectKeys.md",
+    "size_bytes": 339,
+    "line_count": 18,
+    "preview": "---\nid: AllObjectKeys\ntitle: AllObjectKeys\n---\n\n# Type Alias: AllObjectKeys\\<T\\>\n\n```ts\ntype AllObjectKeys<T> = T extends any ? keyof T & string | number : never;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/AnyFieldApi.md",
+    "filename": "AnyFieldApi.md",
+    "size_bytes": 446,
+    "line_count": 14,
+    "preview": "---\nid: AnyFieldApi\ntitle: AnyFieldApi\n---\n\n# Type Alias: AnyFieldApi\n\n```ts\ntype AnyFieldApi = FieldApi<any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any>;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/DeepKeysAndValues.md",
+    "filename": "DeepKeysAndValues.md",
+    "size_bytes": 394,
+    "line_count": 18,
+    "preview": "---\nid: DeepKeysAndValues\ntitle: DeepKeysAndValues\n---\n\n# Type Alias: DeepKeysAndValues\\<T\\>\n\n```ts\ntype DeepKeysAndValues<T> = DeepKeysAndValuesImpl<T> extends AnyDeepKeyAndValue ? DeepKeysAndValuesImpl<T> : never;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/DeepKeysAndValuesImpl.md",
+    "filename": "DeepKeysAndValuesImpl.md",
+    "size_bytes": 918,
+    "line_count": 30,
+    "preview": "---\nid: DeepKeysAndValuesImpl\ntitle: DeepKeysAndValuesImpl\n---\n\n# Type Alias: DeepKeysAndValuesImpl\\<T, TParent, TAcc\\>\n\n```ts\ntype DeepKeysAndValuesImpl<T, TParent, TAcc> = unknown extends T ? \n  | TAcc\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/AnyFormApi.md",
+    "filename": "AnyFormApi.md",
+    "size_bytes": 383,
+    "line_count": 14,
+    "preview": "---\nid: AnyFormApi\ntitle: AnyFormApi\n---\n\n# Type Alias: AnyFormApi\n\n```ts\ntype AnyFormApi = FormApi<any, any, any, any, any, any, any, any, any, any, any, any>;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/ValidationMeta.md",
+    "filename": "ValidationMeta.md",
+    "size_bytes": 657,
+    "line_count": 26,
+    "preview": "---\nid: ValidationMeta\ntitle: ValidationMeta\n---\n\n# Type Alias: ValidationMeta\n\n```ts\ntype ValidationMeta = object;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/BroadcastFormSubmissionState.md",
+    "filename": "BroadcastFormSubmissionState.md",
+    "size_bytes": 628,
+    "line_count": 31,
+    "preview": "---\nid: BroadcastFormSubmissionState\ntitle: BroadcastFormSubmissionState\n---\n\n# Type Alias: BroadcastFormSubmissionState\n\n```ts\ntype BroadcastFormSubmissionState = \n  | {\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/DeepKeyAndValueArray.md",
+    "filename": "DeepKeyAndValueArray.md",
+    "size_bytes": 620,
+    "line_count": 28,
+    "preview": "---\nid: DeepKeyAndValueArray\ntitle: DeepKeyAndValueArray\n---\n\n# Type Alias: DeepKeyAndValueArray\\<TParent, T, TAcc\\>\n\n```ts\ntype DeepKeyAndValueArray<TParent, T, TAcc> = DeepKeysAndValuesImpl<NonNullable<T[number]>, ArrayDeepKeyAndValue<TParent, T>, \n  | TAcc\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/DeepKeys.md",
+    "filename": "DeepKeys.md",
+    "size_bytes": 376,
+    "line_count": 20,
+    "preview": "---\nid: DeepKeys\ntitle: DeepKeys\n---\n\n# Type Alias: DeepKeys\\<T\\>\n\n```ts\ntype DeepKeys<T> = unknown extends T ? string : DeepKeysAndValues<T>[\"key\"];\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/FieldMetaBase.md",
+    "filename": "FieldMetaBase.md",
+    "size_bytes": 4873,
+    "line_count": 158,
+    "preview": "---\nid: FieldMetaBase\ntitle: FieldMetaBase\n---\n\n# Type Alias: FieldMetaBase\\<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync\\>\n\n```ts\ntype FieldMetaBase<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync> = object;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/Nullable.md",
+    "filename": "Nullable.md",
+    "size_bytes": 290,
+    "line_count": 18,
+    "preview": "---\nid: Nullable\ntitle: Nullable\n---\n\n# Type Alias: Nullable\\<T\\>\n\n```ts\ntype Nullable<T> = T & undefined | null;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/ExtractGlobalFormError.md",
+    "filename": "ExtractGlobalFormError.md",
+    "size_bytes": 437,
+    "line_count": 18,
+    "preview": "---\nid: ExtractGlobalFormError\ntitle: ExtractGlobalFormError\n---\n\n# Type Alias: ExtractGlobalFormError\\<TFormError\\>\n\n```ts\ntype ExtractGlobalFormError<TFormError> = TFormError extends GlobalFormValidationError<any> ? TFormError[\"form\"] : TFormError;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/AnyFieldMetaDerived.md",
+    "filename": "AnyFieldMetaDerived.md",
+    "size_bytes": 393,
+    "line_count": 12,
+    "preview": "---\nid: AnyFieldMetaDerived\ntitle: AnyFieldMetaDerived\n---\n\n# Type Alias: AnyFieldMetaDerived\n\n```ts\ntype AnyFieldMetaDerived = FieldMetaDerived<any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any>;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/UnwrapFieldValidateOrFn.md",
+    "filename": "UnwrapFieldValidateOrFn.md",
+    "size_bytes": 1338,
+    "line_count": 29,
+    "preview": "---\nid: UnwrapFieldValidateOrFn\ntitle: UnwrapFieldValidateOrFn\n---\n\n# Type Alias: UnwrapFieldValidateOrFn\\<TName, TValidateOrFn, TFormValidateOrFn\\>\n\n```ts\ntype UnwrapFieldValidateOrFn<TName, TValidateOrFn, TFormValidateOrFn> = \n  | [TFormValidateOrFn] extends [StandardSchemaV1<any, infer TStandardOut>] ? TName extends keyof TStandardOut ? StandardSchemaV1Issue[] : undefined : undefined\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/AnyFieldMeta.md",
+    "filename": "AnyFieldMeta.md",
+    "size_bytes": 358,
+    "line_count": 12,
+    "preview": "---\nid: AnyFieldMeta\ntitle: AnyFieldMeta\n---\n\n# Type Alias: AnyFieldMeta\n\n```ts\ntype AnyFieldMeta = FieldMeta<any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any, any>;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/DeepKeysOfType.md",
+    "filename": "DeepKeysOfType.md",
+    "size_bytes": 505,
+    "line_count": 24,
+    "preview": "---\nid: DeepKeysOfType\ntitle: DeepKeysOfType\n---\n\n# Type Alias: DeepKeysOfType\\<TData, TValue\\>\n\n```ts\ntype DeepKeysOfType<TData, TValue> = Extract<DeepKeysAndValues<TData>, AnyDeepKeyAndValue<string, TValue>>[\"key\"];\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/BaseFormState.md",
+    "filename": "BaseFormState.md",
+    "size_bytes": 5402,
+    "line_count": 196,
+    "preview": "---\nid: BaseFormState\ntitle: BaseFormState\n---\n\n# Type Alias: BaseFormState\\<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer\\>\n\n```ts\ntype BaseFormState<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer> = object;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/FieldMetaDerived.md",
+    "filename": "FieldMetaDerived.md",
+    "size_bytes": 4911,
+    "line_count": 155,
+    "preview": "---\nid: FieldMetaDerived\ntitle: FieldMetaDerived\n---\n\n# Type Alias: FieldMetaDerived\\<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync\\>\n\n```ts\ntype FieldMetaDerived<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync> = object;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/UpdaterFn.md",
+    "filename": "UpdaterFn.md",
+    "size_bytes": 416,
+    "line_count": 32,
+    "preview": "---\nid: UpdaterFn\ntitle: UpdaterFn\n---\n\n# Type Alias: UpdaterFn()\\<TInput, TOutput\\>\n\n```ts\ntype UpdaterFn<TInput, TOutput> = (input) => TOutput;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/DeepRecord.md",
+    "filename": "DeepRecord.md",
+    "size_bytes": 353,
+    "line_count": 18,
+    "preview": "---\nid: DeepRecord\ntitle: DeepRecord\n---\n\n# Type Alias: DeepRecord\\<T\\>\n\n```ts\ntype DeepRecord<T> = { [TRecord in DeepKeysAndValues<T> as TRecord[\"key\"]]: TRecord[\"value\"] };\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/BroadcastFormApi.md",
+    "filename": "BroadcastFormApi.md",
+    "size_bytes": 844,
+    "line_count": 42,
+    "preview": "---\nid: BroadcastFormApi\ntitle: BroadcastFormApi\n---\n\n# Type Alias: BroadcastFormApi\n\n```ts\ntype BroadcastFormApi = object;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/Updater.md",
+    "filename": "Updater.md",
+    "size_bytes": 365,
+    "line_count": 22,
+    "preview": "---\nid: Updater\ntitle: Updater\n---\n\n# Type Alias: Updater\\<TInput, TOutput\\>\n\n```ts\ntype Updater<TInput, TOutput> = TOutput | UpdaterFn<TInput, TOutput>;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/UnknownAccessor.md",
+    "filename": "UnknownAccessor.md",
+    "size_bytes": 463,
+    "line_count": 18,
+    "preview": "---\nid: UnknownAccessor\ntitle: UnknownAccessor\n---\n\n# Type Alias: UnknownAccessor\\<TParent\\>\n\n```ts\ntype UnknownAccessor<TParent> = TParent[\"key\"] extends never ? string : `${TParent[\"key\"]}.${string}`;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/ValidationError.md",
+    "filename": "ValidationError.md",
+    "size_bytes": 253,
+    "line_count": 12,
+    "preview": "---\nid: ValidationError\ntitle: ValidationError\n---\n\n# Type Alias: ValidationError\n\n```ts\ntype ValidationError = unknown;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/TupleAccessor.md",
+    "filename": "TupleAccessor.md",
+    "size_bytes": 497,
+    "line_count": 22,
+    "preview": "---\nid: TupleAccessor\ntitle: TupleAccessor\n---\n\n# Type Alias: TupleAccessor\\<TParent, TKey\\>\n\n```ts\ntype TupleAccessor<TParent, TKey> = `${TParent[\"key\"] extends never ? \"\" : TParent[\"key\"]}[${TKey}]`;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/UnwrapFormValidateOrFn.md",
+    "filename": "UnwrapFormValidateOrFn.md",
+    "size_bytes": 629,
+    "line_count": 18,
+    "preview": "---\nid: UnwrapFormValidateOrFn\ntitle: UnwrapFormValidateOrFn\n---\n\n# Type Alias: UnwrapFormValidateOrFn\\<TValidateOrFn\\>\n\n```ts\ntype UnwrapFormValidateOrFn<TValidateOrFn> = [TValidateOrFn] extends [FormValidateFn<any>] ? ExtractGlobalFormError<ReturnType<TValidateOrFn>> : [TValidateOrFn] extends [StandardSchemaV1<any, any>] ? Record<string, StandardSchemaV1Issue[]> : undefined;\n```\n"
+  }
+,
+  {
+    "path": "reference/type-aliases/FormValidateFn.md",
+    "filename": "FormValidateFn.md",
+    "size_bytes": 556,
+    "line_count": 34,
+    "preview": "---\nid: FormValidateFn\ntitle: FormValidateFn\n---\n\n# Type Alias: FormValidateFn()\\<TFormData\\>\n\n```ts\ntype FormValidateFn<TFormData> = (props) => unknown;\n```\n"
+  }
+,
+  {
+    "path": "reference/index.md",
+    "filename": "index.md",
+    "size_bytes": 4907,
+    "line_count": 110,
+    "preview": "---\nid: \"@tanstack/form-core\"\ntitle: \"@tanstack/form-core\"\n---\n\n# @tanstack/form-core\n\n## Classes\n\n- [FieldApi](classes/FieldApi.md)\n"
+  }
+,
+  {
+    "path": "reference/variables/defaultValidationLogic.md",
+    "filename": "defaultValidationLogic.md",
+    "size_bytes": 313,
+    "line_count": 12,
+    "preview": "---\nid: defaultValidationLogic\ntitle: defaultValidationLogic\n---\n\n# Variable: defaultValidationLogic\n\n```ts\nconst defaultValidationLogic: ValidationLogicFn;\n```\n"
+  }
+,
+  {
+    "path": "reference/variables/formEventClient.md",
+    "filename": "formEventClient.md",
+    "size_bytes": 273,
+    "line_count": 12,
+    "preview": "---\nid: formEventClient\ntitle: formEventClient\n---\n\n# Variable: formEventClient\n\n```ts\nconst formEventClient: FormEventClient;\n```\n"
+  }
+,
+  {
+    "path": "reference/variables/standardSchemaValidators.md",
+    "filename": "standardSchemaValidators.md",
+    "size_bytes": 1652,
+    "line_count": 73,
+    "preview": "---\nid: standardSchemaValidators\ntitle: standardSchemaValidators\n---\n\n# Variable: standardSchemaValidators\n\n```ts\nconst standardSchemaValidators: object;\n```\n"
+  }
+,
+  {
+    "path": "reference/variables/throttleFormState.md",
+    "filename": "throttleFormState.md",
+    "size_bytes": 374,
+    "line_count": 22,
+    "preview": "---\nid: throttleFormState\ntitle: throttleFormState\n---\n\n# Variable: throttleFormState()\n\n```ts\nconst throttleFormState: (...args) => void;\n```\n"
+  }
+,
+  {
+    "path": "reference/functions/formOptions.md",
+    "filename": "formOptions.md",
+    "size_bytes": 2026,
+    "line_count": 76,
+    "preview": "---\nid: formOptions\ntitle: formOptions\n---\n\n# Function: formOptions()\n\n```ts\nfunction formOptions<TOptions, TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta>(defaultOpts): TOptions;\n```\n"
+  }
+,
+  {
+    "path": "reference/functions/createFieldMap.md",
+    "filename": "createFieldMap.md",
+    "size_bytes": 434,
+    "line_count": 28,
+    "preview": "---\nid: createFieldMap\ntitle: createFieldMap\n---\n\n# Function: createFieldMap()\n\n```ts\nfunction createFieldMap<T>(values): { [K in string | number | symbol]: K };\n```\n"
+  }
+,
+  {
+    "path": "reference/functions/uuid.md",
+    "filename": "uuid.md",
+    "size_bytes": 239,
+    "line_count": 16,
+    "preview": "---\nid: uuid\ntitle: uuid\n---\n\n# Function: uuid()\n\n```ts\nfunction uuid(): string;\n```\n"
+  }
+,
+  {
+    "path": "reference/functions/evaluate.md",
+    "filename": "evaluate.md",
+    "size_bytes": 347,
+    "line_count": 32,
+    "preview": "---\nid: evaluate\ntitle: evaluate\n---\n\n# Function: evaluate()\n\n```ts\nfunction evaluate<T>(objA, objB): boolean;\n```\n"
+  }
+,
+  {
+    "path": "reference/functions/isStandardSchemaValidator.md",
+    "filename": "isStandardSchemaValidator.md",
+    "size_bytes": 491,
+    "line_count": 22,
+    "preview": "---\nid: isStandardSchemaValidator\ntitle: isStandardSchemaValidator\n---\n\n# Function: isStandardSchemaValidator()\n\n```ts\nfunction isStandardSchemaValidator(validator): validator is StandardSchemaV1<unknown, unknown>;\n```\n"
+  }
+,
+  {
+    "path": "reference/functions/mergeForm.md",
+    "filename": "mergeForm.md",
+    "size_bytes": 881,
+    "line_count": 32,
+    "preview": "---\nid: mergeForm\ntitle: mergeForm\n---\n\n# Function: mergeForm()\n\n```ts\nfunction mergeForm<TFormData>(baseForm, state): FormApi<NoInfer<TFormData>, any, any, any, any, any, any, any, any, any, any, any>;\n```\n"
+  }
+,
+  {
+    "path": "reference/functions/isGlobalFormValidationError.md",
+    "filename": "isGlobalFormValidationError.md",
+    "size_bytes": 447,
+    "line_count": 22,
+    "preview": "---\nid: isGlobalFormValidationError\ntitle: isGlobalFormValidationError\n---\n\n# Function: isGlobalFormValidationError()\n\n```ts\nfunction isGlobalFormValidationError(error): error is GlobalFormValidationError<unknown>;\n```\n"
+  }
+,
+  {
+    "path": "reference/functions/revalidateLogic.md",
+    "filename": "revalidateLogic.md",
+    "size_bytes": 871,
+    "line_count": 30,
+    "preview": "---\nid: revalidateLogic\ntitle: revalidateLogic\n---\n\n# Function: revalidateLogic()\n\n```ts\nfunction revalidateLogic(__namedParameters): ValidationLogicFn;\n```\n"
+  }
+,
+  {
+    "path": "reference/interfaces/FormOptions.md",
+    "filename": "FormOptions.md",
+    "size_bytes": 6660,
+    "line_count": 264,
+    "preview": "---\nid: FormOptions\ntitle: FormOptions\n---\n\n# Interface: FormOptions\\<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta\\>\n\nDefined in: [packages/form-core/src/FormApi.ts:375](https://github.com/TanStack/form/blob/main/packages/form-core/src/FormApi.ts#L375)\n\nAn object representing the options for a form.\n"
+  }
+,
+  {
+    "path": "reference/interfaces/FieldOptions.md",
+    "filename": "FieldOptions.md",
+    "size_bytes": 4430,
+    "line_count": 160,
+    "preview": "---\nid: FieldOptions\ntitle: FieldOptions\n---\n\n# Interface: FieldOptions\\<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync\\>\n\nDefined in: [packages/form-core/src/FieldApi.ts:391](https://github.com/TanStack/form/blob/main/packages/form-core/src/FieldApi.ts#L391)\n\nAn object type representing the options for a field in a form.\n"
+  }
+,
+  {
+    "path": "reference/interfaces/ValidationLogicProps.md",
+    "filename": "ValidationLogicProps.md",
+    "size_bytes": 1504,
+    "line_count": 85,
+    "preview": "---\nid: ValidationLogicProps\ntitle: ValidationLogicProps\n---\n\n# Interface: ValidationLogicProps\n\nDefined in: [packages/form-core/src/ValidationLogic.ts:20](https://github.com/TanStack/form/blob/main/packages/form-core/src/ValidationLogic.ts#L20)\n\n## Properties\n"
+  }
+,
+  {
+    "path": "reference/interfaces/FormListeners.md",
+    "filename": "FormListeners.md",
+    "size_bytes": 3915,
+    "line_count": 178,
+    "preview": "---\nid: FormListeners\ntitle: FormListeners\n---\n\n# Interface: FormListeners\\<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta\\>\n\nDefined in: [packages/form-core/src/FormApi.ts:270](https://github.com/TanStack/form/blob/main/packages/form-core/src/FormApi.ts#L270)\n\n## Type Parameters\n"
+  }
+,
+  {
+    "path": "reference/interfaces/FieldListeners.md",
+    "filename": "FieldListeners.md",
+    "size_bytes": 1918,
+    "line_count": 82,
+    "preview": "---\nid: FieldListeners\ntitle: FieldListeners\n---\n\n# Interface: FieldListeners\\<TParentData, TName, TData\\>\n\nDefined in: [packages/form-core/src/FieldApi.ts:375](https://github.com/TanStack/form/blob/main/packages/form-core/src/FieldApi.ts#L375)\n\n## Type Parameters\n"
+  }
+,
+  {
+    "path": "reference/interfaces/ArrayDeepKeyAndValue.md",
+    "filename": "ArrayDeepKeyAndValue.md",
+    "size_bytes": 1125,
+    "line_count": 52,
+    "preview": "---\nid: ArrayDeepKeyAndValue\ntitle: ArrayDeepKeyAndValue\n---\n\n# Interface: ArrayDeepKeyAndValue\\<TParent, T\\>\n\nDefined in: [packages/form-core/src/util-types.ts:33](https://github.com/TanStack/form/blob/main/packages/form-core/src/util-types.ts#L33)\n\n## Extends\n"
+  }
+,
+  {
+    "path": "reference/interfaces/StandardSchemaV1Issue.md",
+    "filename": "StandardSchemaV1Issue.md",
+    "size_bytes": 884,
+    "line_count": 34,
+    "preview": "---\nid: StandardSchemaV1Issue\ntitle: StandardSchemaV1Issue\n---\n\n# Interface: StandardSchemaV1Issue\n\nDefined in: [packages/form-core/src/standardSchemaValidator.ts:179](https://github.com/TanStack/form/blob/main/packages/form-core/src/standardSchemaValidator.ts#L179)\n\nThe issue interface of the failure output.\n"
+  }
+,
+  {
+    "path": "reference/interfaces/BaseFormOptions.md",
+    "filename": "BaseFormOptions.md",
+    "size_bytes": 1019,
+    "line_count": 48,
+    "preview": "---\nid: BaseFormOptions\ntitle: BaseFormOptions\n---\n\n# Interface: BaseFormOptions\\<TFormData, TSubmitMeta\\>\n\nDefined in: [packages/form-core/src/FormApi.ts:361](https://github.com/TanStack/form/blob/main/packages/form-core/src/FormApi.ts#L361)\n\nAn object representing the base properties of a form, unrelated to any validators\n"
+  }
+,
+  {
+    "path": "reference/interfaces/FormValidators.md",
+    "filename": "FormValidators.md",
+    "size_bytes": 4582,
+    "line_count": 184,
+    "preview": "---\nid: FormValidators\ntitle: FormValidators\n---\n\n# Interface: FormValidators\\<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync\\>\n\nDefined in: [packages/form-core/src/FormApi.ts:174](https://github.com/TanStack/form/blob/main/packages/form-core/src/FormApi.ts#L174)\n\n## Type Parameters\n"
+  }
+,
+  {
+    "path": "reference/interfaces/FieldValidators.md",
+    "filename": "FieldValidators.md",
+    "size_bytes": 6147,
+    "line_count": 260,
+    "preview": "---\nid: FieldValidators\ntitle: FieldValidators\n---\n\n# Interface: FieldValidators\\<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync\\>\n\nDefined in: [packages/form-core/src/FieldApi.ts:287](https://github.com/TanStack/form/blob/main/packages/form-core/src/FieldApi.ts#L287)\n\n## Type Parameters\n"
+  }
+,
+  {
+    "path": "reference/interfaces/FormState.md",
+    "filename": "FormState.md",
+    "size_bytes": 11062,
+    "line_count": 496,
+    "preview": "---\nid: FormState\ntitle: FormState\n---\n\n# Interface: FormState\\<TFormData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer\\>\n\nDefined in: [packages/form-core/src/FormApi.ts:740](https://github.com/TanStack/form/blob/main/packages/form-core/src/FormApi.ts#L740)\n\nAn object representing the current state of the form.\n"
+  }
+,
+  {
+    "path": "reference/interfaces/FieldApiOptions.md",
+    "filename": "FieldApiOptions.md",
+    "size_bytes": 7053,
+    "line_count": 246,
+    "preview": "---\nid: FieldApiOptions\ntitle: FieldApiOptions\n---\n\n# Interface: FieldApiOptions\\<TParentData, TName, TData, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TFormOnMount, TFormOnChange, TFormOnChangeAsync, TFormOnBlur, TFormOnBlurAsync, TFormOnSubmit, TFormOnSubmitAsync, TFormOnDynamic, TFormOnDynamicAsync, TFormOnServer, TParentSubmitMeta\\>\n\nDefined in: [packages/form-core/src/FieldApi.ts:487](https://github.com/TanStack/form/blob/main/packages/form-core/src/FieldApi.ts#L487)\n\nAn object type representing the required options for the FieldApi class.\n"
+  }
+,
+  {
+    "path": "reference/interfaces/ObjectDeepKeyAndValue.md",
+    "filename": "ObjectDeepKeyAndValue.md",
+    "size_bytes": 1139,
+    "line_count": 54,
+    "preview": "---\nid: ObjectDeepKeyAndValue\ntitle: ObjectDeepKeyAndValue\n---\n\n# Interface: ObjectDeepKeyAndValue\\<TParent, T, TKey\\>\n\nDefined in: [packages/form-core/src/util-types.ts:97](https://github.com/TanStack/form/blob/main/packages/form-core/src/util-types.ts#L97)\n\n## Extends\n"
+  }
+,
+  {
+    "path": "reference/interfaces/UnknownDeepKeyAndValue.md",
+    "filename": "UnknownDeepKeyAndValue.md",
+    "size_bytes": 1009,
+    "line_count": 46,
+    "preview": "---\nid: UnknownDeepKeyAndValue\ntitle: UnknownDeepKeyAndValue\n---\n\n# Interface: UnknownDeepKeyAndValue\\<TParent\\>\n\nDefined in: [packages/form-core/src/util-types.ts:122](https://github.com/TanStack/form/blob/main/packages/form-core/src/util-types.ts#L122)\n\n## Extends\n"
+  }
+,
+  {
+    "path": "reference/interfaces/FieldGroupOptions.md",
+    "filename": "FieldGroupOptions.md",
+    "size_bytes": 3035,
+    "line_count": 118,
+    "preview": "---\nid: FieldGroupOptions\ntitle: FieldGroupOptions\n---\n\n# Interface: FieldGroupOptions\\<TFormData, TFieldGroupData, TFields, TOnMount, TOnChange, TOnChangeAsync, TOnBlur, TOnBlurAsync, TOnSubmit, TOnSubmitAsync, TOnDynamic, TOnDynamicAsync, TOnServer, TSubmitMeta\\>\n\nDefined in: [packages/form-core/src/FieldGroupApi.ts:49](https://github.com/TanStack/form/blob/main/packages/form-core/src/FieldGroupApi.ts#L49)\n\nAn object representing the options for a field group.\n"
+  }
+,
+  {
+    "path": "reference/interfaces/AnyDeepKeyAndValue.md",
+    "filename": "AnyDeepKeyAndValue.md",
+    "size_bytes": 927,
+    "line_count": 45,
+    "preview": "---\nid: AnyDeepKeyAndValue\ntitle: AnyDeepKeyAndValue\n---\n\n# Interface: AnyDeepKeyAndValue\\<K, V\\>\n\nDefined in: [packages/form-core/src/util-types.ts:22](https://github.com/TanStack/form/blob/main/packages/form-core/src/util-types.ts#L22)\n\n## Extended by\n"
+  }
+,
+  {
+    "path": "reference/interfaces/FieldGroupState.md",
+    "filename": "FieldGroupState.md",
+    "size_bytes": 554,
+    "line_count": 26,
+    "preview": "---\nid: FieldGroupState\ntitle: FieldGroupState\n---\n\n# Interface: FieldGroupState\\<TFieldGroupData\\>\n\nDefined in: [packages/form-core/src/FieldGroupApi.ts:39](https://github.com/TanStack/form/blob/main/packages/form-core/src/FieldGroupApi.ts#L39)\n\n## Type Parameters\n"
+  }
+,
+  {
+    "path": "reference/interfaces/TupleDeepKeyAndValue.md",
+    "filename": "TupleDeepKeyAndValue.md",
+    "size_bytes": 1177,
+    "line_count": 56,
+    "preview": "---\nid: TupleDeepKeyAndValue\ntitle: TupleDeepKeyAndValue\n---\n\n# Interface: TupleDeepKeyAndValue\\<TParent, T, TKey\\>\n\nDefined in: [packages/form-core/src/util-types.ts:56](https://github.com/TanStack/form/blob/main/packages/form-core/src/util-types.ts#L56)\n\n## Extends\n"
+  }
+
+]
