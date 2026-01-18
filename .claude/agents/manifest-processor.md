@@ -3,7 +3,7 @@ name: manifest-processor
 description: Process a documentation manifest end-to-end. Downloads files and applies AI filtering for GitHub sources. Spawn one instance per manifest for parallel processing.
 skills: download-docs, filter-docs
 tools: Read, Write, Bash, Glob, Grep
-model: haiku
+model: sonnet
 ---
 
 # Manifest Processor
