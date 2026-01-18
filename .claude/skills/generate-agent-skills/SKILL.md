@@ -8,7 +8,7 @@ Run `/generate-agent-skills` after `/build-my-context7` to generate skills based
 
 ## How It Works
 
-This skill reads the downloaded documentation to understand each agent's current skill format, then generates appropriate skills.
+This skill reads the downloaded documentation to understand each agent's current skill format, then generates appropriate skills. Documentation files are stored once in a shared location, with each agent's skill containing only its SKILL.md and a symlink to the shared references.
 
 ## Instructions
 
@@ -43,7 +43,21 @@ For each agent, read its skill documentation to understand the current format:
 - Note: YAML frontmatter with `name` (lowercase, hyphens), `description`
 - Note: skill locations and format requirements
 
-### Step 3: Generate skills for each agent
+### Step 3: Create shared documentation
+
+Create shared documentation directory and copy docs once:
+
+```bash
+# Create shared directory
+mkdir -p dotfiles/shared
+
+# For each documentation set, copy to shared location
+cp -r output/claude-code-docs dotfiles/shared/
+cp -r output/codex-docs dotfiles/shared/
+cp -r output/opencode-docs dotfiles/shared/
+```
+
+### Step 4: Generate skills for each agent
 
 For each agent (Claude, Codex, OpenCode), create skills in `dotfiles/<agent>/skills/`:
 
@@ -54,45 +68,59 @@ For each agent (Claude, Codex, OpenCode), create skills in `dotfiles/<agent>/ski
 For each skill:
 1. Create directory: `dotfiles/<agent>/skills/<skill-name>/`
 2. Create `SKILL.md` following the agent's format from Step 2
-3. Create `references/` directory
-4. Copy docs from `output/<skill-name>/` to `references/`
+3. Do NOT create `references/` - the install script handles this
 
-### Step 4: Adapt to spec changes
+**Example commands:**
+```bash
+# Create skill directory
+mkdir -p dotfiles/claude/skills/opencode-docs
+
+# Create SKILL.md (with appropriate content)
+# ... write SKILL.md file ...
+
+# No symlinks needed - install.sh creates them at install time
+```
+
+### Step 5: Adapt to spec changes
 
 If the skill documentation shows different requirements than current implementation:
 - Update SKILL.md format accordingly
 - Adjust directory structure if needed
 - Report what changes were made
 
-### Step 5: Report results
+### Step 6: Report results
 
 Summarize:
 - Which agents were processed
 - Which skills were generated/updated
 - Any format changes detected
+- Disk space saved by using shared docs
 
-**Recommend next step**: Tell the user to run `/install-agent-skills` to symlink the generated skills to system locations.
+**Recommend next step**: Tell the user to run `/install-agent-skills` to deploy the generated skills to system locations.
 
 ## Target Structure
 
 ```
 dotfiles/
+├── shared/                      # Single copy of all documentation
+│   ├── claude-code-docs/
+│   ├── codex-docs/
+│   └── opencode-docs/
 ├── claude/skills/
 │   ├── claude-code-docs/
-│   │   ├── SKILL.md
-│   │   └── references/
+│   │   └── SKILL.md             # Only SKILL.md, no references/
 │   ├── codex-docs/
+│   │   └── SKILL.md
 │   └── opencode-docs/
+│       └── SKILL.md
 ├── codex/skills/
-│   ├── claude-code-docs/
-│   ├── codex-docs/
-│   └── opencode-docs/
+│   └── (same structure)
 └── opencode/skills/
-    ├── claude-code-docs/
-    ├── codex-docs/
-    └── opencode-docs/
+    └── (same structure)
 ```
 
 ## Important
 
-Always read the latest skill documentation before generating. Do not assume formats are static.
+- Always read the latest skill documentation before generating. Do not assume formats are static.
+- Do NOT create `references/` folders - the install script creates symlinks at install time.
+- The shared docs are stored once, reducing repo size significantly.

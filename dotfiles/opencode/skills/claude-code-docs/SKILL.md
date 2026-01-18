@@ -1,6 +1,6 @@
 ---
 name: claude-code-docs
-description: Local Claude Code documentation reference. Use when asked about Claude Code features, configuration, skills, hooks, MCP, sub-agents, or plugins.
+description: Local Claude Code documentation reference. Use when asked about Claude Code features, configuration, skills, hooks, MCP, sub-agents, plugins, or troubleshooting Claude Code issues.
 compatibility: opencode
 metadata:
   source: local-docs
@@ -8,20 +8,17 @@ metadata:
 
 # Claude Code Documentation
 
-Local reference for Claude Code CLI and its features.
+This skill provides local reference documentation for Claude Code.
 
 ## When to use
 
 Use this skill when the user asks about:
-- Claude Code features, setup, or configuration
-- Skills, hooks, sub-agents, or plugins
-- MCP server integration
-- Programmatic usage or output styles
+- Claude Code features and capabilities
+- Configuration options and settings
+- Skills, hooks, or MCP servers
+- Sub-agents and plugins
+- Troubleshooting Claude Code issues
 
-## How to use
+## Available documentation
 
-Read the relevant documentation from the `references/` directory:
-
-- `references/getting-started/` - Overview, quick start, common workflows
-- `references/build-with-claude-code/` - Skills, hooks, MCP, plugins, sub-agents
-- `references/configuration/` - Settings and configuration
+See the `references/` folder for the full documentation.

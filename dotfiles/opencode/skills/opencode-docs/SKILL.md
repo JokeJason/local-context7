@@ -8,20 +8,18 @@ metadata:
 
 # OpenCode Documentation
 
-Local reference for OpenCode and its features.
+This skill provides local reference documentation for OpenCode.
 
 ## When to use
 
 Use this skill when the user asks about:
-- OpenCode features, setup, or configuration
-- Tools, agents, or plugins
-- MCP server integration
-- CLI commands and TUI interface
-- IDE integration (VS Code, etc.)
+- OpenCode features and capabilities
+- Tools and agents
+- MCP servers
+- Plugins
+- CLI and TUI usage
+- IDE integration
 
-## How to use
+## Available documentation
 
-Read the relevant documentation from the `references/` directory:
-
-- `references/README.md` - Main overview
-- `references/packages/web/src/content/docs/` - Detailed documentation
+See the `references/` folder for the full documentation.
