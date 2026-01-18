@@ -1,0 +1,9 @@
+{
+    "_source": {
+        "type": "github",
+        "repo": "vercel/next.js",
+        "branch": "canary",
+        "path": "docs",
+        "extensions": [".md", ".mdx"]
+    }
+}
