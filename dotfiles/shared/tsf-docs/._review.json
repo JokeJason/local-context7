@@ -8,6 +8,14 @@
   }
 ,
   {
+    "path": "comparison.md",
+    "filename": "comparison.md",
+    "size_bytes": 7007,
+    "line_count": 58,
+    "preview": "---\nid: comparison\ntitle: Comparison | TanStack Form\n---\n\n> ⚠️ This comparison table is under construction and is still not completely accurate. If you use any of these libraries and feel the information could be improved, feel free to suggest changes (with notes or evidence of claims) using the \"Edit this page on Github\" link at the bottom of this page.\n\nFeature/Capability Key:\n\n- ✅ 1st-class, built-in, and ready to use with no added configuration or code\n"
+  }
+,
+  {
     "path": "framework/svelte/quick-start.md",
     "filename": "quick-start.md",
     "size_bytes": 1133,
