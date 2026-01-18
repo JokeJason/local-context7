@@ -33,9 +33,17 @@ output/             # Intermediate downloaded/filtered docs
 
 ## Workflow
 
-1. `/build-my-context7` - Downloads and filters documentation from manifests
-2. `/generate-agent-skills` - Creates SKILL.md files and copies docs to `shared/`
-3. `/install-agent-skills` - Installs skills with symlinks to shared docs
+**Process all documentation:**
+1. `/build-my-context7` - Downloads and filters all manifests
+2. `/generate-agent-skills` - Creates all SKILL.md files
+3. `/install-agent-skills` - Installs all skills
+
+**Process a single library (more efficient):**
+1. `/build-my-context7 <name>` - Download only specified manifest
+2. `/generate-agent-skills <name>` - Generate only specified skill
+3. `/install-agent-skills <name>` - Install only specified skill
+
+Example: `/build-my-context7 zod-docs` → `/generate-agent-skills zod-docs` → `/install-agent-skills zod-docs`
 
 ## Adding New Documentation
 
@@ -61,4 +69,4 @@ Create a manifest in `.claude/skills/download-docs/scripts/manifests/`:
 }
 ```
 
-Then run the workflow: `/build-my-context7` → `/generate-agent-skills` → `/install-agent-skills`
+Then run: `/build-my-context7 <manifest-name>` → `/generate-agent-skills <manifest-name>` → `/install-agent-skills <manifest-name>`

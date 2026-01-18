@@ -17,9 +17,10 @@ local-context7 downloads official documentation from various sources, filters it
 |-------|--------|-------|-------------|
 | `claude-code-docs` | [Anthropic](https://docs.anthropic.com/en/docs/claude-code) | 13 | Claude Code CLI features, hooks, MCP, skills |
 | `codex-docs` | [OpenAI](https://github.com/openai/codex) | 12 | Codex CLI configuration, skills, agents |
-| `opencode-docs` | [OpenCode](https://github.com/opencode-ai/opencode) | 45 | OpenCode tools, agents, MCP, plugins |
+| `opencode-docs` | [OpenCode](https://github.com/anomalyco/opencode) | 70 | OpenCode tools, agents, MCP, plugins |
 | `nextjs-canary-docs` | [Vercel](https://github.com/vercel/next.js) | 376 | Next.js App Router, Server Components, APIs |
-| `tsf-docs` | [TanStack](https://github.com/TanStack/form) | 208 | TanStack Form validation, React/Vue/Solid/Angular |
+| `tsf-docs` | [TanStack](https://github.com/TanStack/form) | 192 | TanStack Form validation, React/Vue/Solid/Angular |
+| `zod-docs` | [Zod](https://github.com/colinhacks/zod) | 13 | Zod schema validation, TypeScript type inference |
 
 ## Quick Start
 
@@ -31,15 +32,18 @@ local-context7 downloads official documentation from various sources, filters it
 
 ### Using with Claude Code
 
+**Process all documentation:**
 ```bash
-# 1. Download and filter documentation
-/build-my-context7
+/build-my-context7           # Download and filter all manifests
+/generate-agent-skills       # Generate all skills
+/install-agent-skills        # Install all skills
+```
 
-# 2. Generate skills from filtered docs
-/generate-agent-skills
-
-# 3. Install skills to system locations
-/install-agent-skills
+**Process a single library (more efficient for adding new docs):**
+```bash
+/build-my-context7 zod-docs        # Download only zod-docs
+/generate-agent-skills zod-docs    # Generate only zod-docs skill
+/install-agent-skills zod-docs     # Install only zod-docs skill
 ```
 
 ### Manual/Standalone Usage
