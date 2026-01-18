@@ -7,14 +7,19 @@ Build local documentation reference material for AI coding agents.
 local-context7 downloads official documentation from various sources, filters it with AI assistance to keep only developer-relevant content, and generates skills that make the docs available as context during development.
 
 **Supported AI Agents:**
-- Claude Code
-- OpenAI Codex CLI
-- OpenCode
+- Claude Code (`~/.claude/skills/`)
+- OpenAI Codex CLI (`~/.codex/skills/`)
+- OpenCode (`~/.config/opencode/skills/`)
 
 **Included Documentation:**
-- Claude Code official docs
-- Codex CLI docs
-- OpenCode docs
+
+| Skill | Source | Files | Description |
+|-------|--------|-------|-------------|
+| `claude-code-docs` | [Anthropic](https://docs.anthropic.com/en/docs/claude-code) | 13 | Claude Code CLI features, hooks, MCP, skills |
+| `codex-docs` | [OpenAI](https://github.com/openai/codex) | 12 | Codex CLI configuration, skills, agents |
+| `opencode-docs` | [OpenCode](https://github.com/opencode-ai/opencode) | 45 | OpenCode tools, agents, MCP, plugins |
+| `nextjs-canary-docs` | [Vercel](https://github.com/vercel/next.js) | 376 | Next.js App Router, Server Components, APIs |
+| `tsf-docs` | [TanStack](https://github.com/TanStack/form) | 208 | TanStack Form validation, React/Vue/Solid/Angular |
 
 ## Quick Start
 
@@ -118,14 +123,12 @@ For HTML documentation (requires `pandoc`):
 └── agents/                 # Sub-agents
 
 dotfiles/                   # Generated skills (source of truth)
-├── claude/skills/          # → ~/.claude/skills/
-├── codex/skills/           # → ~/.codex/skills/
-└── opencode/skills/        # → ~/.config/opencode/skills/
+├── shared/                 # Documentation stored once
+├── claude/skills/          # SKILL.md → ~/.claude/skills/
+├── codex/skills/           # SKILL.md → ~/.codex/skills/
+└── opencode/skills/        # SKILL.md → ~/.config/opencode/skills/
 
 output/                     # Intermediate files (gitignored)
-├── claude-code-docs/
-├── codex-docs/
-└── opencode-docs/
 ```
 
 ## How It Works
