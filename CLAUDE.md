@@ -21,18 +21,21 @@ Think of it as a local alternative to Context7's cloud-based documentation looku
 └── agents/         # Sub-agents (manifest-processor)
 
 dotfiles/           # Generated skills (deployed to system)
-├── claude/skills/  # → ~/.claude/skills/
-├── codex/skills/   # → ~/.codex/skills/
-└── opencode/skills/# → ~/.config/opencode/skills/
+├── shared/         # Shared docs (stored once, not duplicated)
+├── claude/skills/  # SKILL.md only → ~/.claude/skills/
+├── codex/skills/   # SKILL.md only → ~/.codex/skills/
+└── opencode/skills/# SKILL.md only → ~/.config/opencode/skills/
 
 output/             # Intermediate downloaded/filtered docs
 ```
 
+**Note:** Each agent's skill directory contains only `SKILL.md`. The `references/` folder is created at install time as a symlink to `dotfiles/shared/<skill>/`.
+
 ## Workflow
 
 1. `/build-my-context7` - Downloads and filters documentation from manifests
-2. `/generate-agent-skills` - Creates skills from filtered docs for each agent
-3. `/install-agent-skills` - Symlinks generated skills to system locations
+2. `/generate-agent-skills` - Creates SKILL.md files and copies docs to `shared/`
+3. `/install-agent-skills` - Installs skills with symlinks to shared docs
 
 ## Adding New Documentation
 
