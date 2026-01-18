@@ -5,21 +5,46 @@ description: Local TanStack Form documentation reference. Use when asked about T
 
 # TanStack Form Documentation
 
-This skill provides local reference documentation for TanStack Form.
+TanStack Form is the ultimate solution for handling forms in web applications. It provides first-class TypeScript support, headless UI components, and a framework-agnostic design for form management across React, Vue, Solid, Angular, Svelte, and Lit.
+
+## Navigation Guide
+
+**Getting Started:** `references/` - Core docs (6 files)
+- `overview.md`, `installation.md`, `typescript.md`, `philosophy.md`
+
+**Framework Guides:** `references/framework/` - Framework-specific docs (112 files)
+- React (36 files): `framework/react/guides/`
+- Solid (27 files): `framework/solid/guides/`
+- Vue (20 files): `framework/vue/guides/`
+- Angular (15 files): `framework/angular/guides/`
+- Svelte (8 files): `framework/svelte/guides/`
+- Lit (6 files): `framework/lit/guides/`
+
+**API Reference:** `references/reference/` - Complete API docs (74 files)
+- Classes, functions, interfaces, type aliases
+
+## Key Entry Points
+
+| Task | Start Here |
+|------|------------|
+| Getting started | `references/overview.md` |
+| Installation | `references/installation.md` |
+| TypeScript setup | `references/typescript.md` |
+| React forms | `references/framework/react/guides/` |
+| Vue forms | `references/framework/vue/guides/` |
+| API reference | `references/reference/index.md` |
 
 ## When to use
 
 Use this skill when the user asks about:
 - TanStack Form features and capabilities
-- Form validation (sync, async, schema-based)
+- Form validation (sync, async, schema-based with Zod/Yup/Valibot)
 - Form state management and subscriptions
 - Field arrays and dynamic forms
-- Framework-specific integration (React, Vue, Solid, Angular, Svelte, Lit)
-- Form submission and error handling
-- TypeScript support and type inference
-- Custom validators and adapters
-- Zod, Yup, Valibot integration
+- Framework-specific integration
 
-## Available documentation
+## How to find information
 
-See the `references/` folder for the full documentation.
+1. Use Navigation Guide to find the section
+2. Check Key Entry Points for common tasks
+3. For API details: `references/reference/`
