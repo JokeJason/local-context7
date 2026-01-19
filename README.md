@@ -1,5 +1,7 @@
 # local-context7
 
+[English](README.md) | [中文](README-cn.md)
+
 Build local documentation reference material for AI coding agents.
 
 > **This repo is designed to be used with Claude Code.** Open this repo in Claude Code and use slash commands (`/build-my-context7`, `/generate-agent-skills`, `/install-agent-skills`) to download docs, generate skills, and install them. The skills and scripts are meant to be invoked by Claude Code, not run manually.
