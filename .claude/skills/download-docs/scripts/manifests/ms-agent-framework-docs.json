@@ -1,0 +1,10 @@
+{
+  "$schema": "./manifest.schema.json",
+  "_source": {
+    "type": "github",
+    "repo": "microsoft/agent-framework",
+    "path": ".",
+    "extensions": [".md", ".mdx", ".cs"],
+    "exclude": ["dotnet/src/**", "**/tests/**", "**/test/**"]
+  }
+}
