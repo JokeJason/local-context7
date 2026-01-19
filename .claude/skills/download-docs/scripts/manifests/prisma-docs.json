@@ -1,0 +1,9 @@
+{
+    "_source": {
+        "type": "github",
+        "repo": "prisma/docs",
+        "branch": "main",
+        "path": "content",
+        "extensions": [".md", ".mdx"]
+    }
+}
