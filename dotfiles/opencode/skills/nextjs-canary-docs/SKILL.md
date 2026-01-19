@@ -58,8 +58,11 @@ Use this skill when the user asks about:
 
 ## How to find information
 
-1. Use the Navigation Guide above to identify the relevant section
-2. Start with the Key Entry Points for common tasks
-3. For App Router: explore `references/01-app/`
-4. For Pages Router: explore `references/02-pages/`
-5. For API details: check `03-api-reference/` within each router section
+1. **First**, read `references/STRUCTURE.md` to see all 377 documentation files organized by directory
+2. Use the Navigation Guide above to identify the relevant section
+3. Start with the Key Entry Points for common tasks
+4. For App Router: explore `references/01-app/`
+5. For Pages Router: explore `references/02-pages/`
+6. For API details: check `03-api-reference/` within each router section
+
+**STRUCTURE.md contains a complete file listing - always check it first when searching for specific topics.**

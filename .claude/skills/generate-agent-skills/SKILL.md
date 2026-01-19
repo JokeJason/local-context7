@@ -43,6 +43,36 @@ total_size=$(du -sk dotfiles/shared/{skill-name} | cut -f1)
 | 2 | 30-100 files OR 500KB-2MB | [templates/tier2.md](templates/tier2.md) |
 | 3 | > 100 files OR > 2MB | [templates/tier3.md](templates/tier3.md) |
 
+### Step 3.5: Generate STRUCTURE.md (Tier 3 only)
+
+For tier 3 docs, generate `dotfiles/shared/{skill-name}/STRUCTURE.md` with:
+
+```markdown
+# {Library} Documentation Structure
+
+Total: {N} files
+
+## {directory1}/ ({count} files)
+
+- `{directory1}/file1.md`
+- `{directory1}/file2.md`
+- `{directory1}/subdir/file3.md`
+
+## {directory2}/ ({count} files)
+
+- `{directory2}/file1.md`
+...
+```
+
+**Generation approach:**
+1. List all `.md` and `.mdx` files in the docs folder
+2. Group files by top-level directory
+3. Sort directories alphabetically
+4. Include full relative paths for each file
+5. Add file counts per directory and total
+
+This gives the agent a complete map of available documentation before it starts searching.
+
 ### Step 4: Generate SKILL.md
 
 For each agent (Claude, Codex, OpenCode):

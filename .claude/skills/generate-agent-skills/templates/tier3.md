@@ -2,6 +2,8 @@
 
 List only top-level directories. Read only key entry point files for summaries.
 
+**Important:** For tier 3, also generate `STRUCTURE.md` in `dotfiles/shared/{skill-name}/` (see SKILL.md Step 3.5).
+
 ```yaml
 ---
 name: {skill-name}
@@ -12,18 +14,10 @@ description: Local {Library} documentation reference. Use when asked about {topi
 
 {One paragraph description}
 
-## Navigation Guide
+## Quick Reference
 
-**{Section 1}:** `references/{dir1}/` - {summary} ({N} files)
-
-**{Section 2}:** `references/{dir2}/` - {summary} ({N} files)
-
-**{Section 3}:** `references/{dir3}/` - {summary} ({N} files)
-
-## Key Entry Points
-
-| Task | Start Here |
-|------|------------|
+| Topic | Entry Point |
+|-------|-------------|
 | Getting started | `references/{path}` |
 | API reference | `references/{path}` |
 | {Common task} | `references/{path}` |
@@ -36,7 +30,9 @@ Use this skill when the user asks about:
 
 ## How to find information
 
-1. Use Navigation Guide to find the section
-2. Check Key Entry Points for common tasks
-3. Explore the directory structure
+1. **First**, read `references/STRUCTURE.md` to see all available documentation files
+2. Identify the relevant section/files based on the user's question
+3. Read specific files for detailed information
+
+**STRUCTURE.md contains a complete file listing organized by directory - always check it first before searching.**
 ```

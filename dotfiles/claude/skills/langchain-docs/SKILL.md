@@ -53,6 +53,9 @@ Use this skill when the user asks about:
 
 ## How to find information
 
-1. Use Navigation Guide to find the section
-2. Check Key Entry Points for common tasks
-3. For API details: `references/python/` or `references/javascript/`
+1. **First**, read `references/STRUCTURE.md` to see all 1688 documentation files organized by directory
+2. Use Navigation Guide to find the section
+3. Check Key Entry Points for common tasks
+4. For API details: `references/python/` or `references/javascript/`
+
+**STRUCTURE.md contains a complete file listing - always check it first when searching for specific topics.**
