@@ -2,6 +2,8 @@
 
 Build local documentation reference material for AI coding agents.
 
+> **This repo is designed to be used with Claude Code.** Open this repo in Claude Code and use slash commands (`/build-my-context7`, `/generate-agent-skills`, `/install-agent-skills`) to download docs, generate skills, and install them. The skills and scripts are meant to be invoked by Claude Code, not run manually.
+
 ## What It Does
 
 local-context7 downloads official documentation from various sources, filters it with AI assistance to keep only developer-relevant content, and generates skills that make the docs available as context during development.
@@ -15,10 +17,12 @@ local-context7 downloads official documentation from various sources, filters it
 
 | Skill | Source | Files | Description |
 |-------|--------|-------|-------------|
-| `claude-code-docs` | [Anthropic](https://docs.anthropic.com/en/docs/claude-code) | 13 | Claude Code CLI features, hooks, MCP, skills |
+| `claude-code-docs` | [Anthropic](https://docs.anthropic.com/en/docs/claude-code) | 30 | Claude Code CLI features, hooks, MCP, skills |
 | `codex-docs` | [OpenAI](https://github.com/openai/codex) | 12 | Codex CLI configuration, skills, agents |
-| `opencode-docs` | [OpenCode](https://github.com/anomalyco/opencode) | 70 | OpenCode tools, agents, MCP, plugins |
+| `langchain-docs` | [LangChain](https://github.com/langchain-ai/docs) | 1688 | LangChain, LangGraph, agents, RAG, tools |
 | `nextjs-canary-docs` | [Vercel](https://github.com/vercel/next.js) | 376 | Next.js App Router, Server Components, APIs |
+| `opencode-docs` | [OpenCode](https://github.com/anomalyco/opencode) | 70 | OpenCode tools, agents, MCP, plugins |
+| `prisma-docs` | [Prisma](https://github.com/prisma/docs) | 415 | Prisma ORM, Client, Schema, migrations |
 | `tsf-docs` | [TanStack](https://github.com/TanStack/form) | 192 | TanStack Form validation, React/Vue/Solid/Angular |
 | `zod-docs` | [Zod](https://github.com/colinhacks/zod) | 13 | Zod schema validation, TypeScript type inference |
 
@@ -26,49 +30,45 @@ local-context7 downloads official documentation from various sources, filters it
 
 ### Prerequisites
 
-- `jq` - JSON parsing
-- `git` - GitHub cloning
-- `curl` - URL downloads
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) installed
+- `jq`, `git`, `curl` available in your shell
 
-### Using with Claude Code
+### Usage
 
-**Process all documentation:**
-```bash
+1. Open this repo in Claude Code
+2. Run the slash commands:
+
+```
 /build-my-context7           # Download and filter all manifests
-/generate-agent-skills       # Generate all skills
-/install-agent-skills        # Install all skills
+/generate-agent-skills       # Generate skills for all agents
+/install-agent-skills        # Install skills to system locations
 ```
 
-**Process a single library (more efficient for adding new docs):**
-```bash
+**To process a single library:**
+```
 /build-my-context7 zod-docs        # Download only zod-docs
 /generate-agent-skills zod-docs    # Generate only zod-docs skill
 /install-agent-skills zod-docs     # Install only zod-docs skill
 ```
 
-### Manual/Standalone Usage
-
-```bash
-# Download docs from a specific manifest
-.claude/skills/download-docs/scripts/download.sh claude-code-docs
-
-# Download from all manifests
-.claude/skills/download-docs/scripts/download.sh
-
-# Install a specific skill
-.claude/skills/install-agent-skills/scripts/install.sh \
-  dotfiles/claude/skills/claude-code-docs \
-  ~/.claude/skills
-```
+After installation, the skills are available in your other projects. For example, when working on a Next.js app, Claude Code will automatically have access to `nextjs-canary-docs`.
 
 ## Adding New Documentation
 
-Create a manifest JSON file in `.claude/skills/download-docs/scripts/manifests/`.
+Just give Claude Code the GitHub URL of the docs folder:
 
-### GitHub Source
+> "Add docs from https://github.com/prisma/docs/tree/main/content"
 
-For repositories containing documentation:
+Claude Code will automatically create the manifest and run the build commands. This is the fastest way to add new documentation.
 
+**Or create a manifest manually:**
+
+1. Create a JSON file in `.claude/skills/download-docs/scripts/manifests/`
+2. Run `/build-my-context7 <name>` → `/generate-agent-skills <name>` → `/install-agent-skills <name>`
+
+### Manifest Formats
+
+**GitHub Source** (for repos with docs):
 ```json
 {
   "_source": {
@@ -82,35 +82,20 @@ For repositories containing documentation:
 }
 ```
 
-### URL Source
-
-For individual files:
-
+**URL Source** (for individual files):
 ```json
 {
   "getting-started": {
-    "installation": "https://example.com/docs/install.md",
-    "quickstart": "https://example.com/docs/quickstart.md"
-  },
-  "api": {
-    "reference": "https://example.com/docs/api.md"
+    "installation": "https://example.com/docs/install.md"
   }
 }
 ```
 
-### URL Source with HTML Conversion
-
-For HTML documentation (requires `pandoc`):
-
+**URL Source with HTML Conversion** (requires `pandoc`):
 ```json
 {
-  "_source": {
-    "type": "url",
-    "convert": "html"
-  },
-  "docs": {
-    "overview": "https://example.com/docs/overview.html"
-  }
+  "_source": { "type": "url", "convert": "html" },
+  "docs": { "overview": "https://example.com/docs/overview.html" }
 }
 ```
 
