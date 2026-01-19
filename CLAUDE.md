@@ -70,3 +70,16 @@ Create a manifest in `.claude/skills/download-docs/scripts/manifests/`:
 ```
 
 Then run: `/build-my-context7 <manifest-name>` → `/generate-agent-skills <manifest-name>` → `/install-agent-skills <manifest-name>`
+
+## Keeping README Updated
+
+**After creating or updating a doc skill, always update README.md:**
+
+1. Update the "Included Documentation" table with correct file counts
+2. Add new skills or remove deleted ones
+3. Verify source links are accurate
+
+Run this to get current file counts:
+```bash
+for dir in dotfiles/shared/*/; do name=$(basename "$dir"); count=$(find "$dir" -name "*.md" -o -name "*.mdx" | wc -l); echo "$name: $count"; done
+```
