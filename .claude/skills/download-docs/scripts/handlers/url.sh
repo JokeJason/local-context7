@@ -3,23 +3,19 @@
 # Handler for URL-based sources
 # Downloads files from specified URLs, with optional HTML conversion
 #
-# Manifest formats:
-#
-# Simple URL manifest (markdown files):
+# Manifest format:
 # {
-#     "category-name": {
-#         "doc-name": "https://example.com/path/to/doc.md"
-#     }
-# }
-#
-# With explicit source config:
-# {
+#     "$schema": "./manifest.schema.json",
 #     "_source": {
 #         "type": "url",
-#         "convert": "html"  // optional: convert HTML to markdown
+#         "convert": "html",    // optional: convert HTML to markdown
+#         "_disabled": true,    // optional: skip this manifest
+#         "_reason": "..."      // optional: reason for disabling
 #     },
-#     "category-name": {
-#         "doc-name": "https://example.com/docs/page.html"
+#     "files": {
+#         "category-name": {
+#             "doc-name": "https://example.com/docs/page.html"
+#         }
 #     }
 # }
 
@@ -31,6 +27,16 @@ download_from_urls() {
     local success_count=0
     local fail_count=0
     local failed_urls=""
+
+    # Check if manifest is disabled
+    local disabled=$(jq -r '._source._disabled // false' "$manifest_file")
+    if [ "$disabled" = "true" ]; then
+        local reason=$(jq -r '._source._reason // "No reason provided"' "$manifest_file")
+        echo -e "${YELLOW}Skipping: $manifest_name (disabled)${NC}"
+        echo -e "  Reason: $reason"
+        echo ""
+        return 0
+    fi
 
     # Check if HTML conversion is requested
     local convert=$(jq -r '._source.convert // empty' "$manifest_file")
@@ -51,16 +57,16 @@ download_from_urls() {
     fi
 
     # Use jq to recursively find all string values (URLs) with their paths
-    # Exclude _source key used for source config
+    # Read from .files key
     local entries=$(jq -r '
-        del(._source) |
+        .files //empty |
         paths(type == "string") as $p |
         "\($p | join("/"))|\(getpath($p))"
     ' "$manifest_file")
 
     # Check if there are any entries
     if [ -z "$entries" ]; then
-        echo -e "  ${YELLOW}No URLs found in manifest${NC}"
+        echo -e "  ${YELLOW}No URLs found in manifest (missing 'files' key?)${NC}"
         echo ""
         return 0
     fi
@@ -82,7 +88,7 @@ download_from_urls() {
             # Download and convert HTML to markdown
             local temp_html=$(mktemp)
 
-            if curl -sSfL "$url" -o "$temp_html" 2>/dev/null; then
+            if curl -sSfL --compressed "$url" -o "$temp_html" 2>/dev/null; then
                 if pandoc -f html -t markdown -o "$output_file" "$temp_html" 2>/dev/null; then
                     echo -e "${GREEN}OK${NC}"
                     ((success_count++))
@@ -101,7 +107,7 @@ download_from_urls() {
             rm -f "$temp_html"
         else
             # Direct download (markdown)
-            if curl -sSfL "$url" -o "$output_file" 2>/dev/null; then
+            if curl -sSfL --compressed "$url" -o "$output_file" 2>/dev/null; then
                 echo -e "${GREEN}OK${NC}"
                 ((success_count++))
             else

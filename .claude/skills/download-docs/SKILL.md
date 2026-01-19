@@ -24,7 +24,7 @@ Output location: `output/{manifest-name}/`
 
 ## Manifest Format
 
-Manifests are JSON files in `scripts/manifests/`. Two source types are supported:
+Manifests are JSON files in `scripts/manifests/`. Use `$schema` for IDE validation. Two source types are supported:
 
 ### GitHub Source (for large doc sets)
 
@@ -32,6 +32,7 @@ Clones repository and extracts markdown files:
 
 ```json
 {
+  "$schema": "./manifest.schema.json",
   "_source": {
     "type": "github",
     "repo": "owner/repo-name",
@@ -64,8 +65,12 @@ Downloads specific files from URLs:
 
 ```json
 {
-  "category-name": {
-    "doc-name": "https://example.com/path/to/doc.md"
+  "$schema": "./manifest.schema.json",
+  "_source": { "type": "url" },
+  "files": {
+    "category-name": {
+      "doc-name": "https://example.com/path/to/doc.md"
+    }
   }
 }
 ```
@@ -76,13 +81,34 @@ Downloads HTML and converts to markdown (requires pandoc):
 
 ```json
 {
+  "$schema": "./manifest.schema.json",
   "_source": {
     "type": "url",
     "convert": "html"
   },
-  "category-name": {
-    "doc-name": "https://example.com/docs/page.html"
+  "files": {
+    "category-name": {
+      "doc-name": "https://example.com/docs/page.html"
+    }
   }
+}
+```
+
+> **Note:** HTML conversion only works for static HTML. SPA sites (React, Angular, etc.) will produce empty output.
+
+### Disabling a Manifest
+
+Add `_disabled` to skip processing:
+
+```json
+{
+  "$schema": "./manifest.schema.json",
+  "_source": {
+    "type": "url",
+    "_disabled": true,
+    "_reason": "SPA site - requires Playwright handler"
+  },
+  "files": { ... }
 }
 ```
 

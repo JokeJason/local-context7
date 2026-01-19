@@ -70,9 +70,12 @@ Claude Code will automatically create the manifest and run the build commands. T
 
 ### Manifest Formats
 
+Manifests use JSON Schema for validation. Add `"$schema": "./manifest.schema.json"` for IDE autocomplete and validation.
+
 **GitHub Source** (for repos with docs):
 ```json
 {
+  "$schema": "./manifest.schema.json",
   "_source": {
     "type": "github",
     "repo": "owner/repo-name",
@@ -87,8 +90,12 @@ Claude Code will automatically create the manifest and run the build commands. T
 **URL Source** (for individual files):
 ```json
 {
-  "getting-started": {
-    "installation": "https://example.com/docs/install.md"
+  "$schema": "./manifest.schema.json",
+  "_source": { "type": "url" },
+  "files": {
+    "getting-started": {
+      "installation": "https://example.com/docs/install.md"
+    }
   }
 }
 ```
@@ -96,10 +103,15 @@ Claude Code will automatically create the manifest and run the build commands. T
 **URL Source with HTML Conversion** (requires `pandoc`):
 ```json
 {
+  "$schema": "./manifest.schema.json",
   "_source": { "type": "url", "convert": "html" },
-  "docs": { "overview": "https://example.com/docs/overview.html" }
+  "files": {
+    "docs": { "overview": "https://example.com/docs/overview.html" }
+  }
 }
 ```
+
+> **Limitation:** HTML conversion only works for static HTML pages. Single Page Applications (SPAs) that render content via JavaScript (e.g., React/Angular apps) will produce empty output. See TODO below for planned Playwright support.
 
 ## Directory Structure
 
@@ -136,6 +148,10 @@ output/                     # Intermediate files (gitignored)
 - **Customization** - Add your own documentation sources
 - **Privacy** - No data sent to external services during development
 - **Speed** - Instant context loading without API calls
+
+## TODO
+
+- [ ] **Playwright handler for SPA sites** - Add a `"type": "playwright"` source handler to support JavaScript-rendered documentation sites (e.g., antigravity.google). Would use headless Chromium to render pages before extracting content.
 
 ## License
 

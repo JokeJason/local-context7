@@ -1,4 +1,5 @@
 {
+    "$schema": "./manifest.schema.json",
     "_source": {
         "type": "github",
         "repo": "langchain-ai/docs",

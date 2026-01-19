@@ -1,8 +1,0 @@
-{
-    "_source": {
-        "type": "github",
-        "repo": "langchain-ai/docs",
-        "branch": "main",
-        "extensions": [".md", ".mdx"]
-    }
-}

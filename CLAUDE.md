@@ -47,11 +47,12 @@ Example: `/build-my-context7 zod-docs` → `/generate-agent-skills zod-docs` →
 
 ## Adding New Documentation
 
-Create a manifest in `.claude/skills/download-docs/scripts/manifests/`:
+Create a manifest in `.claude/skills/download-docs/scripts/manifests/`. Use `$schema` for IDE validation.
 
 **GitHub source** (for repos with docs):
 ```json
 {
+  "$schema": "./manifest.schema.json",
   "_source": {
     "type": "github",
     "repo": "owner/repo",
@@ -63,11 +64,23 @@ Create a manifest in `.claude/skills/download-docs/scripts/manifests/`:
 **URL source** (for individual files):
 ```json
 {
-  "category": {
-    "doc-name": "https://example.com/doc.md"
+  "$schema": "./manifest.schema.json",
+  "_source": { "type": "url" },
+  "files": {
+    "category": {
+      "doc-name": "https://example.com/doc.md"
+    }
   }
 }
 ```
+
+## Known Limitations
+
+**HTML conversion does not work for SPA sites.** The `"convert": "html"` option uses pandoc which only processes static HTML. Sites that render content via JavaScript (React, Angular, etc.) will produce empty files. Examples: antigravity.google, many modern documentation sites.
+
+**Workaround:** Look for GitHub repos with raw markdown instead of scraping HTML sites.
+
+**Planned:** Playwright-based handler for SPA sites (see README TODO).
 
 Then run: `/build-my-context7 <manifest-name>` → `/generate-agent-skills <manifest-name>` → `/install-agent-skills <manifest-name>`
 

@@ -67,6 +67,16 @@ download_from_github() {
     local manifest_name=$(basename "$manifest_file" .json)
     local manifest_output_dir="$output_dir/$manifest_name"
 
+    # Check if manifest is disabled
+    local disabled=$(jq -r '._source._disabled // false' "$manifest_file")
+    if [ "$disabled" = "true" ]; then
+        local reason=$(jq -r '._source._reason // "No reason provided"' "$manifest_file")
+        echo -e "${YELLOW}Skipping: $manifest_name (disabled)${NC}"
+        echo -e "  Reason: $reason"
+        echo ""
+        return 0
+    fi
+
     # Extract GitHub source config
     local repo=$(jq -r '._source.repo' "$manifest_file")
     local branch=$(jq -r '._source.branch // "main"' "$manifest_file")
